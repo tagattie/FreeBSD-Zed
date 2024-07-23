@@ -1,0 +1,11 @@
+--- crates/cli/Cargo.toml.orig	2024-07-11 11:50:31 UTC
++++ crates/cli/Cargo.toml
+@@ -27,7 +27,7 @@ util.workspace = true
+ serde.workspace = true
+ util.workspace = true
+ 
+-[target.'cfg(target_os = "linux")'.dependencies]
++[target.'cfg(any(target_os = "linux", target_os = "freebsd"))'.dependencies]
+ exec.workspace =  true
+ fork.workspace = true
+ 

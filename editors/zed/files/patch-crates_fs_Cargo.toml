@@ -1,0 +1,11 @@
+--- crates/fs/Cargo.toml.orig	2024-07-11 11:58:08 UTC
++++ crates/fs/Cargo.toml
+@@ -44,7 +44,7 @@ windows.workspace = true
+ [target.'cfg(target_os = "windows")'.dependencies]
+ windows.workspace = true
+ 
+-[target.'cfg(target_os = "linux")'.dependencies]
++[target.'cfg(any(target_os = "linux", target_os = "freebsd"))'.dependencies]
+ ashpd.workspace = true
+ 
+ [dev-dependencies]

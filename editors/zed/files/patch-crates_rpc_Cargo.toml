@@ -1,0 +1,11 @@
+--- crates/rpc/Cargo.toml.orig	2024-07-11 12:10:51 UTC
++++ crates/rpc/Cargo.toml
+@@ -35,7 +35,7 @@ zstd = "0.11"
+ util.workspace = true
+ zstd = "0.11"
+ 
+-[target.'cfg(target_os = "linux")'.dependencies]
++[target.'cfg(any(target_os = "linux", target_os = "freebsd"))'.dependencies]
+ zstd = { version = "0.11", features = [ "pkg-config" ] }
+ 
+ 
