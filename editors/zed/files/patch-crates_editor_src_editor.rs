@@ -1,6 +1,6 @@
---- crates/editor/src/editor.rs.orig	2024-07-19 19:12:05 UTC
+--- crates/editor/src/editor.rs.orig	2024-07-24 16:08:14 UTC
 +++ crates/editor/src/editor.rs
-@@ -2251,7 +2251,7 @@ impl Editor {
+@@ -2264,7 +2264,7 @@ impl Editor {
          cx: &mut ViewContext<Self>,
      ) {
          // Copy selections to primary selection buffer

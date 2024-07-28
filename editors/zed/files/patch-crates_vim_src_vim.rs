@@ -1,6 +1,6 @@
---- crates/vim/src/vim.rs.orig	2024-07-11 12:15:49 UTC
+--- crates/vim/src/vim.rs.orig	2024-07-24 16:08:14 UTC
 +++ crates/vim/src/vim.rs
-@@ -543,9 +543,9 @@ impl Vim {
+@@ -548,9 +548,9 @@ impl Vim {
                          cx.write_to_clipboard(content.into());
                      }
                      '*' => {
@@ -12,7 +12,7 @@
                          cx.write_to_clipboard(content.into());
                      }
                      '"' => {
-@@ -613,11 +613,11 @@ impl Vim {
+@@ -618,11 +618,11 @@ impl Vim {
              '_' | ':' | '.' | '#' | '=' => None,
              '+' => cx.read_from_clipboard().map(|item| item.into()),
              '*' => {

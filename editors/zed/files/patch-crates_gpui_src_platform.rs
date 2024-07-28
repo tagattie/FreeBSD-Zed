@@ -1,4 +1,4 @@
---- crates/gpui/src/platform.rs.orig	2024-07-10 14:12:26 UTC
+--- crates/gpui/src/platform.rs.orig	2024-07-24 16:08:14 UTC
 +++ crates/gpui/src/platform.rs
 @@ -7,13 +7,13 @@ mod cosmic_text;
  #[cfg(not(target_os = "macos"))]
@@ -56,7 +56,7 @@
      fn read_from_primary(&self) -> Option<ClipboardItem>;
      fn read_from_clipboard(&self) -> Option<ClipboardItem>;
  
-@@ -520,7 +520,7 @@ impl PlatformInputHandler {
+@@ -524,7 +524,7 @@ impl PlatformInputHandler {
              .flatten()
      }
  
@@ -65,7 +65,7 @@
      fn text_for_range(&mut self, range_utf16: Range<usize>) -> Option<String> {
          self.cx
              .update(|cx| self.handler.text_for_range(range_utf16, cx))
-@@ -688,22 +688,22 @@ pub(crate) struct WindowParams {
+@@ -692,22 +692,22 @@ pub(crate) struct WindowParams {
      pub titlebar: Option<TitlebarOptions>,
  
      /// The kind of window to create
@@ -93,7 +93,7 @@
      pub window_min_size: Option<Size<Pixels>>,
  }
  
-@@ -991,7 +991,7 @@ impl ClipboardItem {
+@@ -995,7 +995,7 @@ impl ClipboardItem {
              .and_then(|m| serde_json::from_str(m).ok())
      }
  

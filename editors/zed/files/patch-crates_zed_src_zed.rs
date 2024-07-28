@@ -1,4 +1,4 @@
---- crates/zed/src/zed.rs.orig	2024-07-19 19:12:05 UTC
+--- crates/zed/src/zed.rs.orig	2024-07-24 16:08:14 UTC
 +++ crates/zed/src/zed.rs
 @@ -1,8 +1,8 @@ pub mod inline_completion_registry;
  mod app_menus;
@@ -19,4 +19,4 @@
 +                    if cfg!(any(target_os = "linux", target_os = "freebsd")) {
                          let prompt = cx.prompt(
                              PromptLevel::Warning,
-                             "Could not install the CLI",
+                             "CLI should already be installed",

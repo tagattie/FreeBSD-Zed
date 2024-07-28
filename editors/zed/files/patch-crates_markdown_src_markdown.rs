@@ -1,6 +1,6 @@
---- crates/markdown/src/markdown.rs.orig	2024-07-11 12:09:00 UTC
+--- crates/markdown/src/markdown.rs.orig	2024-07-24 16:08:14 UTC
 +++ crates/markdown/src/markdown.rs
-@@ -398,7 +398,7 @@ impl MarkdownElement {
+@@ -453,7 +453,7 @@ impl MarkdownElement {
                  } else {
                      if markdown.selection.pending {
                          markdown.selection.pending = false;

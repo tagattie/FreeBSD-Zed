@@ -1,6 +1,6 @@
---- crates/editor/src/element.rs.orig	2024-07-11 11:55:56 UTC
+--- crates/editor/src/element.rs.orig	2024-07-24 16:08:14 UTC
 +++ crates/editor/src/element.rs
-@@ -593,12 +593,12 @@ impl EditorElement {
+@@ -597,12 +597,12 @@ impl EditorElement {
              cx.stop_propagation();
          } else if end_selection && pending_nonempty_selections {
              cx.stop_propagation();

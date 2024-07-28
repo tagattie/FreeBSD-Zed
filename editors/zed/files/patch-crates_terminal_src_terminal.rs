@@ -1,6 +1,19 @@
---- crates/terminal/src/terminal.rs.orig	2024-07-11 12:13:59 UTC
+--- crates/terminal/src/terminal.rs.orig	2024-07-24 16:08:14 UTC
 +++ crates/terminal/src/terminal.rs
-@@ -751,7 +751,7 @@ impl Terminal {
+@@ -346,10 +346,10 @@ impl TerminalBuilder {
+             alacritty_terminal::tty::Options {
+                 shell: alac_shell,
+                 working_directory: working_directory.clone(),
+-                #[cfg(target_os = "linux")]
++                #[cfg(any(target_os = "linux", target_os = "freebsd"))]
+                 hold: !matches!(shell.clone(), Shell::System),
+                 // with hold: true, macOS gets tasks stuck on ctrl-c interrupts periodically
+-                #[cfg(not(target_os = "linux"))]
++                #[cfg(not(any(target_os = "linux", target_os = "freebsd")))]
+                 hold: false,
+                 env: env.into_iter().collect(),
+             }
+@@ -761,7 +761,7 @@ impl Terminal {
              InternalEvent::SetSelection(selection) => {
                  term.selection = selection.as_ref().map(|(sel, _)| sel.clone());
  
@@ -9,7 +22,7 @@
                  if let Some(selection_text) = term.selection_to_string() {
                      cx.write_to_primary(ClipboardItem::new(selection_text));
                  }
-@@ -772,7 +772,7 @@ impl Terminal {
+@@ -782,7 +782,7 @@ impl Terminal {
                      selection.update(point, side);
                      term.selection = Some(selection);
  
@@ -18,7 +31,7 @@
                      if let Some(selection_text) = term.selection_to_string() {
                          cx.write_to_primary(ClipboardItem::new(selection_text));
                      }
-@@ -1325,7 +1325,7 @@ impl Terminal {
+@@ -1335,7 +1335,7 @@ impl Terminal {
                              .push_back(InternalEvent::SetSelection(Some((sel, point))));
                      }
                  }
