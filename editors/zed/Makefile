@@ -1,6 +1,6 @@
 PORTNAME=	zed
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.145.1
+DISTVERSION=	0.146.3
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-editor
 
@@ -32,7 +32,7 @@ GH_ACCOUNT=	zed-industries
 
 USE_XORG=	xcb
 
-CARGO_BUILD_ARGS=	--package zed --package cli
+CARGO_BUILD_ARGS=	--package zed --package cli --package remote_server
 CARGO_TEST_ARGS=	--workspace
 
 MAKE_ENV=	APP_CLI="zedit" \
@@ -47,6 +47,7 @@ MAKE_ENV=	APP_CLI="zedit" \
 RUSTFLAGS=	--cfg vulkan -C link-args=-Wl,-z,nostart-stop-gc
 
 PLIST_FILES=	bin/zedit \
+		bin/zed-remote-server \
 		libexec/zed-editor \
 		share/applications/dev.zed.Zed.desktop \
 		share/icons/hicolor/1024x1024/apps/zed-editor.png \
@@ -63,6 +64,8 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/target/*-unknown-freebsd/release/cli \
 		${STAGEDIR}${PREFIX}/bin/zedit
+	${INSTALL_PROGRAM} ${WRKDIR}/target/*-unknown-freebsd/release/remote_server \
+		${STAGEDIR}${PREFIX}/bin/zed-remote-server
 	${INSTALL_PROGRAM} ${WRKDIR}/target/*-unknown-freebsd/release/zed \
 		${STAGEDIR}${PREFIX}/libexec/zed-editor
 	${INSTALL_DATA} ${WRKSRC}/crates/zed/resources/${PORTNAME}.desktop \

@@ -1,4 +1,4 @@
---- crates/terminal/src/terminal.rs.orig	2024-07-24 16:08:14 UTC
+--- crates/terminal/src/terminal.rs.orig	2024-07-31 16:17:45 UTC
 +++ crates/terminal/src/terminal.rs
 @@ -346,10 +346,10 @@ impl TerminalBuilder {
              alacritty_terminal::tty::Options {
@@ -13,7 +13,7 @@
                  hold: false,
                  env: env.into_iter().collect(),
              }
-@@ -761,7 +761,7 @@ impl Terminal {
+@@ -762,7 +762,7 @@ impl Terminal {
              InternalEvent::SetSelection(selection) => {
                  term.selection = selection.as_ref().map(|(sel, _)| sel.clone());
  
@@ -22,7 +22,7 @@
                  if let Some(selection_text) = term.selection_to_string() {
                      cx.write_to_primary(ClipboardItem::new(selection_text));
                  }
-@@ -782,7 +782,7 @@ impl Terminal {
+@@ -783,7 +783,7 @@ impl Terminal {
                      selection.update(point, side);
                      term.selection = Some(selection);
  
@@ -31,7 +31,7 @@
                      if let Some(selection_text) = term.selection_to_string() {
                          cx.write_to_primary(ClipboardItem::new(selection_text));
                      }
-@@ -1335,7 +1335,7 @@ impl Terminal {
+@@ -1336,7 +1336,7 @@ impl Terminal {
                              .push_back(InternalEvent::SetSelection(Some((sel, point))));
                      }
                  }

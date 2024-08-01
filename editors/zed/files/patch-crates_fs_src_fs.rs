@@ -1,4 +1,4 @@
---- crates/fs/src/fs.rs.orig	2024-07-24 16:08:14 UTC
+--- crates/fs/src/fs.rs.orig	2024-07-31 16:17:45 UTC
 +++ crates/fs/src/fs.rs
 @@ -1,9 +1,9 @@ use git::GitHostingProviderRegistry;
  use anyhow::{anyhow, Result};
@@ -12,16 +12,7 @@
  use std::{fs::File, os::fd::AsFd};
  
  #[cfg(unix)]
-@@ -140,6 +140,8 @@ pub struct RealWatcher {
- pub struct RealWatcher {
-     #[cfg(target_os = "linux")]
-     fs_watcher: parking_lot::Mutex<notify::INotifyWatcher>,
-+    #[cfg(target_os = "freebsd")]
-+    fs_watcher: parking_lot::Mutex<notify::KqueueWatcher>,
- }
- 
- impl RealFs {
-@@ -293,7 +295,7 @@ impl Fs for RealFs {
+@@ -310,7 +310,7 @@ impl Fs for RealFs {
          Ok(())
      }
  
@@ -30,7 +21,7 @@
      async fn trash_file(&self, path: &Path, _options: RemoveOptions) -> Result<()> {
          let file = File::open(path)?;
          match trash::trash_file(&file.as_fd()).await {
-@@ -307,7 +309,7 @@ impl Fs for RealFs {
+@@ -324,7 +324,7 @@ impl Fs for RealFs {
          self.trash_file(path, options).await
      }
  
@@ -39,7 +30,7 @@
      async fn trash_dir(&self, path: &Path, options: RemoveOptions) -> Result<()> {
          self.trash_file(path, options).await
      }
-@@ -329,7 +331,7 @@ impl Fs for RealFs {
+@@ -346,7 +346,7 @@ impl Fs for RealFs {
  
      async fn atomic_write(&self, path: PathBuf, data: String) -> Result<()> {
          smol::unblock(move || {
@@ -48,7 +39,7 @@
                  // Use the directory of the destination as temp dir to avoid
                  // invalid cross-device link error, and XDG_CACHE_DIR for fallback.
                  // See https://github.com/zed-industries/zed/pull/8437 for more details.
-@@ -454,7 +456,7 @@ impl Fs for RealFs {
+@@ -471,7 +471,7 @@ impl Fs for RealFs {
          )
      }
  
@@ -57,7 +48,7 @@
      async fn watch(
          &self,
          path: &Path,
-@@ -609,7 +611,7 @@ impl Fs for RealFs {
+@@ -621,7 +621,7 @@ impl Fs for RealFs {
      }
  }
  
@@ -66,7 +57,7 @@
  impl Watcher for RealWatcher {
      fn add(&self, _: &Path) -> Result<()> {
          Ok(())
-@@ -620,7 +622,7 @@ impl Watcher for RealWatcher {
+@@ -632,7 +632,7 @@ impl Watcher for RealWatcher {
      }
  }
  
@@ -75,3 +66,28 @@
  impl Watcher for RealWatcher {
      fn add(&self, path: &Path) -> Result<()> {
          use notify::Watcher;
+@@ -1808,16 +1808,23 @@ mod tests {
+     }
+ }
+ 
+-#[cfg(target_os = "linux")]
++#[cfg(any(target_os = "linux", target_os = "freebsd"))]
+ pub mod watcher {
+     use std::sync::OnceLock;
+ 
+     use parking_lot::Mutex;
+     use util::ResultExt;
+ 
++    #[cfg(target_os = "linux")]
+     pub struct GlobalWatcher {
+         // two mutexes because calling inotify.add triggers an inotify.event, which needs watchers.
+         pub(super) inotify: Mutex<notify::INotifyWatcher>,
++        pub(super) watchers: Mutex<Vec<Box<dyn Fn(&notify::Event) + Send + Sync>>>,
++    }
++    #[cfg(target_os = "freebsd")]
++    pub struct GlobalWatcher {
++        // two mutexes because calling inotify.add triggers an inotify.event, which needs watchers.
++        pub(super) inotify: Mutex<notify::KqueueWatcher>,
+         pub(super) watchers: Mutex<Vec<Box<dyn Fn(&notify::Event) + Send + Sync>>>,
+     }
+ 

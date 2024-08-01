@@ -1,4 +1,4 @@
---- crates/gpui/src/platform/test/platform.rs.orig	2024-07-11 12:06:02 UTC
+--- crates/gpui/src/platform/test/platform.rs.orig	2024-07-31 16:17:45 UTC
 +++ crates/gpui/src/platform/test/platform.rs
 @@ -23,7 +23,7 @@ pub(crate) struct TestPlatform {
      active_display: Rc<dyn PlatformDisplay>,
@@ -27,7 +27,7 @@
              current_primary_item: Mutex::new(None),
              weak: weak.clone(),
              opened_url: Default::default(),
-@@ -273,7 +273,7 @@ impl Platform for TestPlatform {
+@@ -269,7 +269,7 @@ impl Platform for TestPlatform {
          false
      }
  
@@ -36,7 +36,7 @@
      fn write_to_primary(&self, item: ClipboardItem) {
          *self.current_primary_item.lock() = Some(item);
      }
-@@ -282,7 +282,7 @@ impl Platform for TestPlatform {
+@@ -278,7 +278,7 @@ impl Platform for TestPlatform {
          *self.current_clipboard_item.lock() = Some(item);
      }
  

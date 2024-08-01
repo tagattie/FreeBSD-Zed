@@ -1,6 +1,6 @@
---- crates/zed/Cargo.toml.orig	2024-07-19 19:12:05 UTC
+--- crates/zed/Cargo.toml.orig	2024-07-31 16:17:45 UTC
 +++ crates/zed/Cargo.toml
-@@ -108,7 +108,7 @@ winresource = "0.1"
+@@ -113,7 +113,7 @@ winresource = "0.1"
  [target.'cfg(target_os = "windows")'.build-dependencies]
  winresource = "0.1"
  
