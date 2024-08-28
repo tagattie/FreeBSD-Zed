@@ -1,4 +1,4 @@
---- crates/terminal/src/terminal.rs.orig	2024-07-31 16:17:45 UTC
+--- crates/terminal/src/terminal.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/terminal/src/terminal.rs
 @@ -346,10 +346,10 @@ impl TerminalBuilder {
              alacritty_terminal::tty::Options {
@@ -13,25 +13,25 @@
                  hold: false,
                  env: env.into_iter().collect(),
              }
-@@ -762,7 +762,7 @@ impl Terminal {
+@@ -769,7 +769,7 @@ impl Terminal {
              InternalEvent::SetSelection(selection) => {
                  term.selection = selection.as_ref().map(|(sel, _)| sel.clone());
  
 -                #[cfg(target_os = "linux")]
 +                #[cfg(any(target_os = "linux", target_os = "freebsd"))]
                  if let Some(selection_text) = term.selection_to_string() {
-                     cx.write_to_primary(ClipboardItem::new(selection_text));
+                     cx.write_to_primary(ClipboardItem::new_string(selection_text));
                  }
-@@ -783,7 +783,7 @@ impl Terminal {
+@@ -790,7 +790,7 @@ impl Terminal {
                      selection.update(point, side);
                      term.selection = Some(selection);
  
 -                    #[cfg(target_os = "linux")]
 +                    #[cfg(any(target_os = "linux", target_os = "freebsd"))]
                      if let Some(selection_text) = term.selection_to_string() {
-                         cx.write_to_primary(ClipboardItem::new(selection_text));
+                         cx.write_to_primary(ClipboardItem::new_string(selection_text));
                      }
-@@ -1336,7 +1336,7 @@ impl Terminal {
+@@ -1343,7 +1343,7 @@ impl Terminal {
                              .push_back(InternalEvent::SetSelection(Some((sel, point))));
                      }
                  }
@@ -39,4 +39,4 @@
 +                #[cfg(any(target_os = "linux", target_os = "freebsd"))]
                  MouseButton::Middle => {
                      if let Some(item) = _cx.read_from_primary() {
-                         let text = item.text().to_string();
+                         let text = item.text().unwrap_or_default().to_string();

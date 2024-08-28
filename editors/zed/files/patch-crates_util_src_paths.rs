@@ -1,6 +1,6 @@
---- crates/util/src/paths.rs.orig	2024-07-10 14:12:26 UTC
+--- crates/util/src/paths.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/util/src/paths.rs
-@@ -52,7 +52,7 @@ impl<T: AsRef<Path>> PathExt for T {
+@@ -58,7 +58,7 @@ impl<T: AsRef<Path>> PathExt for T {
      ///   does not have the user's home directory prefix, or if we are not on
      ///   Linux or macOS, the original path is returned unchanged.
      fn compact(&self) -> PathBuf {
@@ -9,7 +9,7 @@
              match self.as_ref().strip_prefix(home_dir().as_path()) {
                  Ok(relative_path) => {
                      let mut shortened_path = PathBuf::new();
-@@ -525,7 +525,7 @@ mod tests {
+@@ -563,7 +563,7 @@ mod tests {
          ]
          .iter()
          .collect();

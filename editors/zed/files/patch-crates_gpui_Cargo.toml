@@ -1,17 +1,19 @@
---- crates/gpui/Cargo.toml.orig	2024-07-31 16:17:45 UTC
+--- crates/gpui/Cargo.toml.orig	2024-08-27 11:06:16 UTC
 +++ crates/gpui/Cargo.toml
-@@ -101,7 +101,7 @@ objc = "0.2"
+@@ -102,16 +102,16 @@ objc = "0.2"
  metal = "0.29"
  objc = "0.2"
  
+-[target.'cfg(any(target_os = "linux", target_os = "macos"))'.dependencies]
++[target.'cfg(any(target_os = "linux", target_os = "freebsd", target_os = "macos"))'.dependencies]
+ pathfinder_geometry = "0.5"
+ 
 -[target.'cfg(any(target_os = "linux", target_os = "windows"))'.dependencies]
 +[target.'cfg(any(target_os = "linux", target_os = "freebsd", target_os = "windows"))'.dependencies]
- flume = "0.11"
  blade-graphics.workspace = true
  blade-macros.workspace = true
-@@ -109,7 +109,7 @@ cosmic-text = { git = "https://github.com/pop-os/cosmi
+ blade-util.workspace = true
  bytemuck = "1"
- cosmic-text = { git = "https://github.com/pop-os/cosmic-text", rev = "542b20c" }
  
 -[target.'cfg(target_os = "linux")'.dependencies]
 +[target.'cfg(any(target_os = "linux", target_os = "freebsd"))'.dependencies]

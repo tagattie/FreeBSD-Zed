@@ -1,6 +1,6 @@
---- crates/zed/src/zed/open_listener.rs.orig	2024-07-31 16:17:45 UTC
+--- crates/zed/src/zed/open_listener.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/zed/src/zed/open_listener.rs
-@@ -271,7 +271,7 @@ impl SshClientDelegate {
+@@ -137,7 +137,7 @@ impl OpenListener {
      }
  }
  

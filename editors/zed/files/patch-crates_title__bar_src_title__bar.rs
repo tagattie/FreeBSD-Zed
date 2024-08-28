@@ -1,6 +1,6 @@
---- crates/title_bar/src/title_bar.rs.orig	2024-07-28 21:09:25 UTC
+--- crates/title_bar/src/title_bar.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/title_bar/src/title_bar.rs
-@@ -73,7 +73,7 @@ impl Render for TitleBar {
+@@ -74,7 +74,7 @@ impl Render for TitleBar {
          let height = Self::height(cx);
          let supported_controls = cx.window_controls();
          let decorations = cx.window_decorations();

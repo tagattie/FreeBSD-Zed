@@ -1,6 +1,6 @@
---- crates/gpui/src/window.rs.orig	2024-07-31 16:17:45 UTC
+--- crates/gpui/src/window.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/gpui/src/window.rs
-@@ -1225,7 +1225,7 @@ impl<'a> WindowContext<'a> {
+@@ -1244,7 +1244,7 @@ impl<'a> WindowContext<'a> {
      /// that currently owns the mouse cursor.
      /// On mac, this is equivalent to `is_window_active`.
      pub fn is_window_hovered(&self) -> bool {

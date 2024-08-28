@@ -1,6 +1,6 @@
---- crates/gpui/src/app.rs.orig	2024-07-31 16:17:45 UTC
+--- crates/gpui/src/app.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/gpui/src/app.rs
-@@ -547,7 +547,7 @@ impl AppContext {
+@@ -565,7 +565,7 @@ impl AppContext {
  
      /// Writes data to the primary selection buffer.
      /// Only available on Linux.
@@ -9,7 +9,7 @@
      pub fn write_to_primary(&self, item: ClipboardItem) {
          self.platform.write_to_primary(item)
      }
-@@ -559,7 +559,7 @@ impl AppContext {
+@@ -577,7 +577,7 @@ impl AppContext {
  
      /// Reads data from the primary selection buffer.
      /// Only available on Linux.

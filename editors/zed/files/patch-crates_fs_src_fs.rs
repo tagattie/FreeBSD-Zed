@@ -1,4 +1,4 @@
---- crates/fs/src/fs.rs.orig	2024-07-31 16:17:45 UTC
+--- crates/fs/src/fs.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/fs/src/fs.rs
 @@ -1,9 +1,9 @@ use git::GitHostingProviderRegistry;
  use anyhow::{anyhow, Result};
@@ -66,7 +66,7 @@
  impl Watcher for RealWatcher {
      fn add(&self, path: &Path) -> Result<()> {
          use notify::Watcher;
-@@ -1808,16 +1808,23 @@ mod tests {
+@@ -1842,7 +1842,7 @@ mod tests {
      }
  }
  
@@ -75,18 +75,13 @@
  pub mod watcher {
      use std::sync::OnceLock;
  
-     use parking_lot::Mutex;
-     use util::ResultExt;
+@@ -1851,7 +1851,10 @@ pub mod watcher {
  
-+    #[cfg(target_os = "linux")]
      pub struct GlobalWatcher {
          // two mutexes because calling inotify.add triggers an inotify.event, which needs watchers.
++        #[cfg(target_os = "linux")]
          pub(super) inotify: Mutex<notify::INotifyWatcher>,
-+        pub(super) watchers: Mutex<Vec<Box<dyn Fn(&notify::Event) + Send + Sync>>>,
-+    }
-+    #[cfg(target_os = "freebsd")]
-+    pub struct GlobalWatcher {
-+        // two mutexes because calling inotify.add triggers an inotify.event, which needs watchers.
++        #[cfg(target_os = "freebsd")]
 +        pub(super) inotify: Mutex<notify::KqueueWatcher>,
          pub(super) watchers: Mutex<Vec<Box<dyn Fn(&notify::Event) + Send + Sync>>>,
      }

@@ -1,4 +1,4 @@
---- crates/zed/src/zed.rs.orig	2024-07-31 16:17:45 UTC
+--- crates/zed/src/zed.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/zed/src/zed.rs
 @@ -1,8 +1,8 @@ pub mod inline_completion_registry;
  mod app_menus;
@@ -10,8 +10,8 @@
 +#[cfg(not(any(target_os = "linux", target_os = "freebsd")))]
  pub(crate) mod only_instance;
  mod open_listener;
- pub(crate) mod session;
-@@ -140,7 +140,7 @@ pub fn initialize_workspace(app_state: Arc<AppState>, 
+ 
+@@ -144,7 +144,7 @@ pub fn initialize_workspace(
          })
          .detach();
  
@@ -20,7 +20,7 @@
          if let Err(e) = fs::watcher::global(|_| {}) {
              let message = format!(db::indoc!{r#"
                  inotify_init returned {}
-@@ -330,7 +330,7 @@ pub fn initialize_workspace(app_state: Arc<AppState>, 
+@@ -335,7 +335,7 @@ pub fn initialize_workspace(
              })
              .register_action(|_, _: &install_cli::Install, cx| {
                  cx.spawn(|workspace, mut cx| async move {

@@ -1,6 +1,6 @@
---- cargo-crates/ipc-channel-0.18.0/src/platform/unix/mod.rs.orig	2024-05-01 01:41:55 UTC
-+++ cargo-crates/ipc-channel-0.18.0/src/platform/unix/mod.rs
-@@ -1167,7 +1167,7 @@ impl UnixCmsg {
+--- cargo-crates/ipc-channel-0.18.2/src/platform/unix/mod.rs.orig	2024-08-28 07:10:54 UTC
++++ cargo-crates/ipc-channel-0.18.2/src/platform/unix/mod.rs
+@@ -1170,7 +1170,7 @@ impl UnixCmsg {
                  }];
                  let result = libc::poll(
                      fd.as_mut_ptr(),

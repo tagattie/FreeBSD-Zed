@@ -1,8 +1,8 @@
---- crates/gpui/src/platform.rs.orig	2024-07-31 16:17:45 UTC
+--- crates/gpui/src/platform.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/gpui/src/platform.rs
-@@ -7,13 +7,13 @@ mod cosmic_text;
- #[cfg(not(target_os = "macos"))]
- mod cosmic_text;
+@@ -4,13 +4,13 @@ mod keystroke;
+ mod app_menu;
+ mod keystroke;
  
 -#[cfg(target_os = "linux")]
 +#[cfg(any(target_os = "linux", target_os = "freebsd"))]
@@ -16,16 +16,16 @@
  mod blade;
  
  #[cfg(any(test, feature = "test-support"))]
-@@ -53,7 +53,7 @@ pub(crate) use cosmic_text::*;
+@@ -55,7 +55,7 @@ pub use keystroke::*;
+ pub use fps::*;
+ pub use keystroke::*;
  
- #[cfg(not(target_os = "macos"))]
- pub(crate) use cosmic_text::*;
 -#[cfg(target_os = "linux")]
 +#[cfg(any(target_os = "linux", target_os = "freebsd"))]
  pub(crate) use linux::*;
  #[cfg(target_os = "macos")]
  pub(crate) use mac::*;
-@@ -68,7 +68,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
+@@ -70,7 +70,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
      Rc::new(MacPlatform::new(headless))
  }
  
@@ -34,7 +34,7 @@
  pub(crate) fn current_platform(headless: bool) -> Rc<dyn Platform> {
      if headless {
          return Rc::new(HeadlessClient::new());
-@@ -84,7 +84,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
+@@ -86,7 +86,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
  
  /// Return which compositor we're guessing we'll use.
  /// Does not attempt to connect to the given compositor
@@ -43,7 +43,7 @@
  #[inline]
  pub fn guess_compositor() -> &'static str {
      if std::env::var_os("ZED_HEADLESS").is_some() {
-@@ -171,10 +171,10 @@ pub(crate) trait Platform: 'static {
+@@ -175,10 +175,10 @@ pub(crate) trait Platform: 'static {
      fn set_cursor_style(&self, style: CursorStyle);
      fn should_auto_hide_scrollbars(&self) -> bool;
  
@@ -56,7 +56,7 @@
      fn read_from_primary(&self) -> Option<ClipboardItem>;
      fn read_from_clipboard(&self) -> Option<ClipboardItem>;
  
-@@ -531,7 +531,7 @@ impl PlatformInputHandler {
+@@ -541,7 +541,7 @@ impl PlatformInputHandler {
              .flatten()
      }
  
@@ -65,7 +65,7 @@
      fn text_for_range(&mut self, range_utf16: Range<usize>) -> Option<String> {
          self.cx
              .update(|cx| self.handler.text_for_range(range_utf16, cx))
-@@ -699,22 +699,22 @@ pub(crate) struct WindowParams {
+@@ -709,17 +709,17 @@ pub(crate) struct WindowParams {
      pub titlebar: Option<TitlebarOptions>,
  
      /// The kind of window to create
@@ -87,13 +87,7 @@
      pub show: bool,
  
      pub display_id: Option<DisplayId>,
- 
--    #[cfg_attr(target_os = "linux", allow(dead_code))]
-+    #[cfg_attr(any(target_os = "linux", target_os = "freebsd"), allow(dead_code))]
-     pub window_min_size: Option<Size<Pixels>>,
- }
- 
-@@ -1002,7 +1002,7 @@ impl ClipboardItem {
+@@ -1215,7 +1215,7 @@ impl ClipboardString {
              .and_then(|m| serde_json::from_str(m).ok())
      }
  

@@ -1,6 +1,6 @@
---- crates/gpui/src/platform/test/platform.rs.orig	2024-07-31 16:17:45 UTC
+--- crates/gpui/src/platform/test/platform.rs.orig	2024-08-27 11:06:16 UTC
 +++ crates/gpui/src/platform/test/platform.rs
-@@ -23,7 +23,7 @@ pub(crate) struct TestPlatform {
+@@ -28,7 +28,7 @@ pub(crate) struct TestPlatform {
      active_display: Rc<dyn PlatformDisplay>,
      active_cursor: Mutex<CursorStyle>,
      current_clipboard_item: Mutex<Option<ClipboardItem>>,
@@ -9,16 +9,16 @@
      current_primary_item: Mutex<Option<ClipboardItem>>,
      pub(crate) prompts: RefCell<TestPrompts>,
      pub opened_url: RefCell<Option<String>>,
-@@ -48,7 +48,7 @@ impl TestPlatform {
+@@ -59,7 +59,7 @@ impl TestPlatform {
          #[cfg(target_os = "macos")]
          let text_system = Arc::new(crate::platform::mac::MacTextSystem::new());
  
 -        #[cfg(target_os = "linux")]
 +        #[cfg(any(target_os = "linux", target_os = "freebsd"))]
-         let text_system = Arc::new(crate::platform::cosmic_text::CosmicTextSystem::new());
+         let text_system = Arc::new(crate::platform::linux::CosmicTextSystem::new());
  
          #[cfg(target_os = "windows")]
-@@ -62,7 +62,7 @@ impl TestPlatform {
+@@ -76,7 +76,7 @@ impl TestPlatform {
              active_display: Rc::new(TestDisplay::new()),
              active_window: Default::default(),
              current_clipboard_item: Mutex::new(None),
@@ -27,7 +27,7 @@
              current_primary_item: Mutex::new(None),
              weak: weak.clone(),
              opened_url: Default::default(),
-@@ -269,7 +269,7 @@ impl Platform for TestPlatform {
+@@ -285,7 +285,7 @@ impl Platform for TestPlatform {
          false
      }
  
@@ -36,7 +36,7 @@
      fn write_to_primary(&self, item: ClipboardItem) {
          *self.current_primary_item.lock() = Some(item);
      }
-@@ -278,7 +278,7 @@ impl Platform for TestPlatform {
+@@ -294,7 +294,7 @@ impl Platform for TestPlatform {
          *self.current_clipboard_item.lock() = Some(item);
      }
  
