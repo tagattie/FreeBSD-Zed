@@ -1,8 +1,8 @@
---- crates/cli/Cargo.toml.orig	2024-07-11 11:50:31 UTC
+--- crates/cli/Cargo.toml.orig	2024-09-04 14:30:20 UTC
 +++ crates/cli/Cargo.toml
-@@ -27,7 +27,7 @@ util.workspace = true
- serde.workspace = true
+@@ -28,7 +28,7 @@ tempfile.workspace = true
  util.workspace = true
+ tempfile.workspace = true
  
 -[target.'cfg(target_os = "linux")'.dependencies]
 +[target.'cfg(any(target_os = "linux", target_os = "freebsd"))'.dependencies]

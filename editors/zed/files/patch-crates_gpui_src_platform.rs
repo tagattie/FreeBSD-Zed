@@ -1,4 +1,4 @@
---- crates/gpui/src/platform.rs.orig	2024-08-27 11:06:16 UTC
+--- crates/gpui/src/platform.rs.orig	2024-09-04 14:30:20 UTC
 +++ crates/gpui/src/platform.rs
 @@ -4,13 +4,13 @@ mod keystroke;
  mod app_menu;
@@ -56,7 +56,7 @@
      fn read_from_primary(&self) -> Option<ClipboardItem>;
      fn read_from_clipboard(&self) -> Option<ClipboardItem>;
  
-@@ -541,7 +541,7 @@ impl PlatformInputHandler {
+@@ -540,7 +540,7 @@ impl PlatformInputHandler {
              .flatten()
      }
  
@@ -65,7 +65,7 @@
      fn text_for_range(&mut self, range_utf16: Range<usize>) -> Option<String> {
          self.cx
              .update(|cx| self.handler.text_for_range(range_utf16, cx))
-@@ -709,17 +709,17 @@ pub(crate) struct WindowParams {
+@@ -708,17 +708,17 @@ pub(crate) struct WindowParams {
      pub titlebar: Option<TitlebarOptions>,
  
      /// The kind of window to create
@@ -87,7 +87,7 @@
      pub show: bool,
  
      pub display_id: Option<DisplayId>,
-@@ -1215,7 +1215,7 @@ impl ClipboardString {
+@@ -1222,7 +1222,7 @@ impl ClipboardString {
              .and_then(|m| serde_json::from_str(m).ok())
      }
  

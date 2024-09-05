@@ -1,6 +1,6 @@
---- crates/gpui/src/platform/keystroke.rs.orig	2024-07-31 16:17:45 UTC
+--- crates/gpui/src/platform/keystroke.rs.orig	2024-09-04 14:30:20 UTC
 +++ crates/gpui/src/platform/keystroke.rs
-@@ -181,7 +181,7 @@ impl std::fmt::Display for Keystroke {
+@@ -182,7 +182,7 @@ impl std::fmt::Display for Keystroke {
              #[cfg(target_os = "macos")]
              f.write_char('⌘')?;
  
