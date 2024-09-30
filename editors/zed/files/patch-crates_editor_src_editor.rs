@@ -1,8 +1,8 @@
---- crates/editor/src/editor.rs.orig	2024-09-04 14:30:20 UTC
+--- crates/editor/src/editor.rs.orig	2024-09-27 20:04:41 UTC
 +++ crates/editor/src/editor.rs
-@@ -2366,7 +2366,7 @@ impl Editor {
-         cx: &mut ViewContext<Self>,
-     ) {
+@@ -2409,7 +2409,7 @@ impl Editor {
+         cx.invalidate_character_coordinates();
+ 
          // Copy selections to primary selection buffer
 -        #[cfg(target_os = "linux")]
 +        #[cfg(any(target_os = "linux", target_os = "freebsd"))]

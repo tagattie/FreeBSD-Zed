@@ -1,4 +1,4 @@
---- crates/gpui/src/platform.rs.orig	2024-09-04 14:30:20 UTC
+--- crates/gpui/src/platform.rs.orig	2024-09-27 20:04:41 UTC
 +++ crates/gpui/src/platform.rs
 @@ -4,13 +4,13 @@ mod keystroke;
  mod app_menu;
@@ -16,8 +16,8 @@
  mod blade;
  
  #[cfg(any(test, feature = "test-support"))]
-@@ -55,7 +55,7 @@ pub use keystroke::*;
- pub use fps::*;
+@@ -53,7 +53,7 @@ pub use keystroke::*;
+ pub use app_menu::*;
  pub use keystroke::*;
  
 -#[cfg(target_os = "linux")]
@@ -25,7 +25,7 @@
  pub(crate) use linux::*;
  #[cfg(target_os = "macos")]
  pub(crate) use mac::*;
-@@ -70,7 +70,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
+@@ -68,7 +68,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
      Rc::new(MacPlatform::new(headless))
  }
  
@@ -34,7 +34,7 @@
  pub(crate) fn current_platform(headless: bool) -> Rc<dyn Platform> {
      if headless {
          return Rc::new(HeadlessClient::new());
-@@ -86,7 +86,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
+@@ -84,7 +84,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
  
  /// Return which compositor we're guessing we'll use.
  /// Does not attempt to connect to the given compositor
@@ -43,7 +43,7 @@
  #[inline]
  pub fn guess_compositor() -> &'static str {
      if std::env::var_os("ZED_HEADLESS").is_some() {
-@@ -175,10 +175,10 @@ pub(crate) trait Platform: 'static {
+@@ -174,10 +174,10 @@ pub(crate) trait Platform: 'static {
      fn set_cursor_style(&self, style: CursorStyle);
      fn should_auto_hide_scrollbars(&self) -> bool;
  
@@ -65,7 +65,7 @@
      fn text_for_range(&mut self, range_utf16: Range<usize>) -> Option<String> {
          self.cx
              .update(|cx| self.handler.text_for_range(range_utf16, cx))
-@@ -708,17 +708,17 @@ pub(crate) struct WindowParams {
+@@ -735,17 +735,17 @@ pub(crate) struct WindowParams {
      pub titlebar: Option<TitlebarOptions>,
  
      /// The kind of window to create
@@ -87,7 +87,7 @@
      pub show: bool,
  
      pub display_id: Option<DisplayId>,
-@@ -1222,7 +1222,7 @@ impl ClipboardString {
+@@ -1250,7 +1250,7 @@ impl ClipboardString {
              .and_then(|m| serde_json::from_str(m).ok())
      }
  

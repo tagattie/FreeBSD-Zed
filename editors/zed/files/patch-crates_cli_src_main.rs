@@ -1,4 +1,4 @@
---- crates/cli/src/main.rs.orig	2024-09-04 14:30:20 UTC
+--- crates/cli/src/main.rs.orig	2024-09-27 20:04:41 UTC
 +++ crates/cli/src/main.rs
 @@ -1,4 +1,4 @@
 -#![cfg_attr(any(target_os = "linux", target_os = "windows"), allow(dead_code))]
@@ -6,7 +6,7 @@
  
  use anyhow::{Context, Result};
  use clap::Parser;
-@@ -206,7 +206,7 @@ fn main() -> Result<()> {
+@@ -210,7 +210,7 @@ fn main() -> Result<()> {
      Ok(())
  }
  

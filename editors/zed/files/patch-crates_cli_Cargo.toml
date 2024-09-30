@@ -1,6 +1,6 @@
---- crates/cli/Cargo.toml.orig	2024-09-04 14:30:20 UTC
+--- crates/cli/Cargo.toml.orig	2024-09-27 20:04:41 UTC
 +++ crates/cli/Cargo.toml
-@@ -28,7 +28,7 @@ tempfile.workspace = true
+@@ -29,7 +29,7 @@ tempfile.workspace = true
  util.workspace = true
  tempfile.workspace = true
  

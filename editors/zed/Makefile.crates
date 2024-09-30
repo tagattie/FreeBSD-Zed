@@ -21,7 +21,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		anstyle-query-1.1.1 \
 		anstyle-wincon-3.0.4 \
 		any_vec-0.14.0 \
-		anyhow-1.0.86 \
+		anyhow-1.0.89 \
 		approx-0.5.1 \
 		arbitrary-1.3.2 \
 		arg_enum_proc_macro-0.3.4 \
@@ -58,9 +58,10 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		async-std-1.12.0 \
 		async-stream-0.3.5 \
 		async-stream-impl-0.3.5 \
-		async-stripe-0.38.1 \
-		async-tar-0.4.2 \
+		async-stripe-0.39.1 \
+		async-tar-0.5.0 \
 		async-task-4.7.1 \
+		async-tls-0.12.0 \
 		async-trait-0.1.81 \
 		async-tungstenite-0.23.0 \
 		async-watch-0.3.1 \
@@ -101,10 +102,10 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		base64-0.22.1 \
 		base64-simd-0.8.0 \
 		base64ct-1.6.0 \
-		bigdecimal-0.3.1 \
+		bigdecimal-0.4.5 \
 		bincode-1.3.3 \
-		bindgen-0.65.1 \
 		bindgen-0.69.4 \
+		bindgen-0.70.1 \
 		bit-set-0.5.3 \
 		bit-set-0.6.0 \
 		bit-vec-0.6.3 \
@@ -114,6 +115,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		bitflags-2.6.0 \
 		bitstream-io-2.5.3 \
 		bitvec-1.0.1 \
+		blake3-1.5.4 \
 		block-0.1.6 \
 		block-buffer-0.10.4 \
 		block-padding-0.3.3 \
@@ -148,7 +150,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		cast-0.3.0 \
 		castaway-0.1.2 \
 		cbc-0.1.2 \
-		cbindgen-0.26.0 \
+		cbindgen-0.27.0 \
 		cc-1.1.15 \
 		cesu8-1.1.0 \
 		cexpr-0.6.0 \
@@ -173,7 +175,9 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		clickhouse-rs-cityhash-sys-0.1.2 \
 		cobs-0.2.3 \
 		cocoa-0.25.0 \
+		cocoa-0.26.0 \
 		cocoa-foundation-0.1.2 \
+		cocoa-foundation-0.2.0 \
 		codespan-reporting-0.11.1 \
 		color_quant-1.1.0 \
 		colorchoice-1.0.2 \
@@ -183,12 +187,16 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		const-oid-0.9.6 \
 		const-random-0.1.18 \
 		const-random-macro-0.1.16 \
+		constant_time_eq-0.3.1 \
 		convert_case-0.4.0 \
 		convert_case-0.6.0 \
 		core-foundation-0.9.4 \
+		core-foundation-0.10.0 \
 		core-foundation-sys-0.8.7 \
 		core-graphics-0.23.2 \
+		core-graphics-0.24.0 \
 		core-graphics-types-0.1.3 \
+		core-graphics-types-0.2.0 \
 		core-services-0.2.1 \
 		core-text-20.1.0 \
 		coreaudio-rs-0.11.3 \
@@ -196,16 +204,17 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		cpal-0.15.3 \
 		cpp_demangle-0.4.4 \
 		cpufeatures-0.2.13 \
-		cranelift-bforest-0.108.1 \
-		cranelift-codegen-0.108.1 \
-		cranelift-codegen-meta-0.108.1 \
-		cranelift-codegen-shared-0.108.1 \
-		cranelift-control-0.108.1 \
-		cranelift-entity-0.108.1 \
-		cranelift-frontend-0.108.1 \
-		cranelift-isle-0.108.1 \
-		cranelift-native-0.108.1 \
-		cranelift-wasm-0.108.1 \
+		cranelift-bforest-0.111.0 \
+		cranelift-bitset-0.111.0 \
+		cranelift-codegen-0.111.0 \
+		cranelift-codegen-meta-0.111.0 \
+		cranelift-codegen-shared-0.111.0 \
+		cranelift-control-0.111.0 \
+		cranelift-entity-0.111.0 \
+		cranelift-frontend-0.111.0 \
+		cranelift-isle-0.111.0 \
+		cranelift-native-0.111.0 \
+		cranelift-wasm-0.111.0 \
 		crc-3.2.1 \
 		crc-catalog-2.4.0 \
 		crc32c-0.6.8 \
@@ -236,7 +245,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		der-0.6.1 \
 		der-0.7.9 \
 		deranged-0.3.11 \
-		derivative-2.2.0 \
 		derive_more-0.99.18 \
 		dialoguer-0.11.0 \
 		diff-0.1.13 \
@@ -252,6 +260,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		dwrote-0.11.1 \
 		dyn-clone-1.0.17 \
 		ecdsa-0.14.8 \
+		educe-0.5.11 \
 		either-1.13.0 \
 		elasticlunr-rs-3.0.2 \
 		elliptic-curve-0.12.3 \
@@ -262,6 +271,8 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		encode_unicode-0.3.6 \
 		encoding_rs-0.8.34 \
 		endi-1.1.0 \
+		enum-ordinalize-4.3.0 \
+		enum-ordinalize-derive-4.3.1 \
 		enumflags2-0.7.10 \
 		enumflags2_derive-0.7.10 \
 		env_filter-0.1.2 \
@@ -305,7 +316,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		foreign-types-macros-0.2.3 \
 		foreign-types-shared-0.1.1 \
 		foreign-types-shared-0.3.1 \
-		fork-0.1.23 \
+		fork-0.2.0 \
 		form_urlencoded-1.2.1 \
 		freetype-sys-0.20.1 \
 		fs-set-times-0.20.1 \
@@ -334,13 +345,12 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		getrandom-0.1.16 \
 		getrandom-0.2.15 \
 		gif-0.13.1 \
-		gimli-0.28.1 \
 		gimli-0.29.0 \
 		git2-0.19.0 \
 		glob-0.3.1 \
 		globset-0.4.14 \
 		gloo-timers-0.2.6 \
-		glow-0.13.1 \
+		glow-0.14.0 \
 		gpu-alloc-0.6.0 \
 		gpu-alloc-ash-0.7.0 \
 		gpu-alloc-types-0.3.0 \
@@ -353,7 +363,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		hashbrown-0.12.3 \
 		hashbrown-0.13.2 \
 		hashbrown-0.14.5 \
-		hashlink-0.8.4 \
+		hashlink-0.9.1 \
 		headers-0.3.9 \
 		headers-core-0.2.0 \
 		heck-0.3.3 \
@@ -418,8 +428,8 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		is_terminal_polyfill-1.70.1 \
 		isahc-1.7.2 \
 		itertools-0.10.5 \
-		itertools-0.11.0 \
 		itertools-0.12.1 \
+		itertools-0.13.0 \
 		itoa-1.0.11 \
 		jni-0.21.1 \
 		jni-sys-0.3.0 \
@@ -444,7 +454,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		libm-0.2.8 \
 		libmimalloc-sys-0.1.39 \
 		libredox-0.1.3 \
-		libsqlite3-sys-0.26.0 \
+		libsqlite3-sys-0.28.0 \
 		libz-sys-1.1.20 \
 		linkify-0.10.0 \
 		linkme-0.3.28 \
@@ -494,7 +504,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		ndk-context-0.1.1 \
 		ndk-sys-0.5.0+25.2.9519653 \
 		new_debug_unreachable-1.0.6 \
-		nix-0.28.0 \
 		nix-0.29.0 \
 		nom-7.1.3 \
 		noop_proc_macro-0.3.0 \
@@ -519,7 +528,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		num_enum_derive-0.7.3 \
 		num_threads-0.1.7 \
 		objc-0.2.7 \
-		object-0.33.0 \
 		object-0.36.4 \
 		oboe-0.6.1 \
 		oboe-sys-0.6.1 \
@@ -555,7 +563,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		pathfinder_geometry-0.5.1 \
 		pathfinder_simd-0.5.4 \
 		pbkdf2-0.12.2 \
-		peeking_take_while-0.1.2 \
 		pem-3.0.4 \
 		pem-rfc7468-0.7.0 \
 		percent-encoding-2.3.1 \
@@ -608,11 +615,11 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		prost-derive-0.9.0 \
 		prost-types-0.9.0 \
 		protobuf-2.28.0 \
-		protols-tree-sitter-proto-0.2.0 \
 		psm-0.1.21 \
 		ptr_meta-0.1.4 \
 		ptr_meta_derive-0.1.4 \
 		pulldown-cmark-0.10.3 \
+		pulldown-cmark-0.12.1 \
 		pulldown-cmark-escape-0.10.1 \
 		qoi-0.4.1 \
 		quick-error-2.0.1 \
@@ -651,12 +658,13 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		resvg-0.41.0 \
 		rfc6979-0.3.1 \
 		rgb-0.8.49 \
+		ring-0.16.20 \
 		ring-0.17.8 \
 		rkyv-0.7.45 \
 		rkyv_derive-0.7.45 \
 		rmp-0.8.14 \
 		rmpv-1.3.0 \
-		rodio-0.17.3 \
+		rodio-0.19.0 \
 		roxmltree-0.19.0 \
 		roxmltree-0.20.0 \
 		rsa-0.9.6 \
@@ -671,9 +679,13 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		rustix-0.37.27 \
 		rustix-0.38.35 \
 		rustix-openpty-0.1.1 \
+		rustls-0.20.9 \
 		rustls-0.21.12 \
 		rustls-native-certs-0.6.3 \
+		rustls-native-certs-0.8.0 \
 		rustls-pemfile-1.0.4 \
+		rustls-pemfile-2.1.3 \
+		rustls-pki-types-1.8.0 \
 		rustls-webpki-0.101.7 \
 		rustversion-1.0.17 \
 		rustybuzz-0.14.1 \
@@ -688,10 +700,10 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		scrypt-0.11.0 \
 		sct-0.7.1 \
 		sea-bae-0.2.0 \
-		sea-orm-0.12.15 \
-		sea-orm-macros-0.12.15 \
-		sea-query-0.30.7 \
-		sea-query-binder-0.5.0 \
+		sea-orm-1.1.0-rc.1 \
+		sea-orm-macros-1.1.0-rc.1 \
+		sea-query-0.32.0-rc.1 \
+		sea-query-binder-0.7.0-rc.1 \
 		seahash-4.1.0 \
 		sealed-0.4.0 \
 		sec1-0.3.0 \
@@ -705,7 +717,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		serde_derive_internals-0.29.1 \
 		serde_fmt-1.0.3 \
 		serde_json-1.0.127 \
-		serde_json_lenient-0.1.8 \
+		serde_json_lenient-0.2.1 \
 		serde_path_to_error-0.1.16 \
 		serde_qs-0.8.5 \
 		serde_qs-0.10.1 \
@@ -745,19 +757,20 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		socket2-0.4.10 \
 		socket2-0.5.7 \
 		spdx-0.10.6 \
+		spin-0.5.2 \
 		spin-0.9.8 \
 		spirv-0.3.0+sdk-1.3.268.0 \
 		spki-0.6.0 \
 		spki-0.7.3 \
 		sptr-0.3.2 \
 		sqlformat-0.2.4 \
-		sqlx-0.7.2 \
-		sqlx-core-0.7.2 \
-		sqlx-macros-0.7.2 \
-		sqlx-macros-core-0.7.2 \
-		sqlx-mysql-0.7.2 \
-		sqlx-postgres-0.7.2 \
-		sqlx-sqlite-0.7.2 \
+		sqlx-0.8.0 \
+		sqlx-core-0.8.0 \
+		sqlx-macros-0.8.0 \
+		sqlx-macros-core-0.8.0 \
+		sqlx-mysql-0.8.0 \
+		sqlx-postgres-0.8.0 \
+		sqlx-sqlite-0.8.0 \
 		stable_deref_trait-1.2.0 \
 		static_assertions-1.1.0 \
 		strict-num-0.1.1 \
@@ -766,6 +779,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		stringprep-0.1.5 \
 		strsim-0.11.1 \
 		strum-0.25.0 \
+		strum-0.26.3 \
 		strum_macros-0.25.3 \
 		subtle-2.6.1 \
 		sval-2.13.0 \
@@ -785,7 +799,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		sync_wrapper-0.1.2 \
 		synchronoise-1.0.1 \
 		sys-locale-0.3.1 \
-		sysinfo-0.30.13 \
+		sysinfo-0.31.4 \
 		system-configuration-0.5.1 \
 		system-configuration-sys-0.5.0 \
 		system-deps-6.2.2 \
@@ -842,22 +856,23 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		tracing-log-0.2.0 \
 		tracing-serde-0.1.3 \
 		tracing-subscriber-0.3.18 \
-		tree-sitter-bash-0.21.0 \
-		tree-sitter-c-0.21.4 \
-		tree-sitter-cpp-0.22.3 \
-		tree-sitter-css-0.21.1 \
-		tree-sitter-elixir-0.2.0 \
-		tree-sitter-embedded-template-0.20.0 \
-		tree-sitter-go-0.21.2 \
+		tree-sitter-0.23.0 \
+		tree-sitter-bash-0.23.1 \
+		tree-sitter-c-0.23.0 \
+		tree-sitter-cpp-0.23.0 \
+		tree-sitter-css-0.23.0 \
+		tree-sitter-elixir-0.3.0 \
+		tree-sitter-embedded-template-0.23.0 \
+		tree-sitter-go-0.23.1 \
 		tree-sitter-html-0.20.4 \
-		tree-sitter-jsdoc-0.21.0 \
-		tree-sitter-json-0.21.0 \
-		tree-sitter-python-0.21.0 \
-		tree-sitter-regex-0.21.0 \
-		tree-sitter-ruby-0.21.0 \
-		tree-sitter-rust-0.21.2 \
-		tree-sitter-typescript-0.21.2 \
-		tree-sitter-yaml-0.6.1 \
+		tree-sitter-jsdoc-0.23.0 \
+		tree-sitter-json-0.23.0 \
+		tree-sitter-language-0.1.0 \
+		tree-sitter-python-0.23.2 \
+		tree-sitter-regex-0.23.0 \
+		tree-sitter-ruby-0.23.0 \
+		tree-sitter-rust-0.23.0 \
+		tree-sitter-typescript-0.23.0 \
 		try-lock-0.2.5 \
 		ttf-parser-0.21.1 \
 		tungstenite-0.20.1 \
@@ -880,6 +895,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		unicode-xid-0.2.5 \
 		unicode_categories-0.1.1 \
 		unindent-0.1.11 \
+		untrusted-0.7.1 \
 		untrusted-0.9.0 \
 		url-2.5.2 \
 		urlencoding-2.1.3 \
@@ -915,27 +931,27 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		wasm-bindgen-macro-support-0.2.93 \
 		wasm-bindgen-shared-0.2.93 \
 		wasm-encoder-0.201.0 \
-		wasm-encoder-0.207.0 \
+		wasm-encoder-0.215.0 \
 		wasm-metadata-0.201.0 \
 		wasmparser-0.201.0 \
-		wasmparser-0.207.0 \
-		wasmprinter-0.207.0 \
-		wasmtime-21.0.1 \
-		wasmtime-asm-macros-21.0.1 \
-		wasmtime-c-api-impl-21.0.1 \
-		wasmtime-c-api-macros-21.0.1 \
-		wasmtime-component-macro-21.0.1 \
-		wasmtime-component-util-21.0.1 \
-		wasmtime-cranelift-21.0.1 \
-		wasmtime-environ-21.0.1 \
-		wasmtime-fiber-21.0.1 \
-		wasmtime-jit-icache-coherence-21.0.1 \
-		wasmtime-slab-21.0.1 \
-		wasmtime-types-21.0.1 \
-		wasmtime-versioned-export-macros-21.0.1 \
-		wasmtime-wasi-21.0.1 \
-		wasmtime-winch-21.0.1 \
-		wasmtime-wit-bindgen-21.0.1 \
+		wasmparser-0.215.0 \
+		wasmprinter-0.215.0 \
+		wasmtime-24.0.0 \
+		wasmtime-asm-macros-24.0.0 \
+		wasmtime-c-api-impl-24.0.0 \
+		wasmtime-c-api-macros-24.0.0 \
+		wasmtime-component-macro-24.0.0 \
+		wasmtime-component-util-24.0.0 \
+		wasmtime-cranelift-24.0.0 \
+		wasmtime-environ-24.0.0 \
+		wasmtime-fiber-24.0.0 \
+		wasmtime-jit-icache-coherence-24.0.0 \
+		wasmtime-slab-24.0.0 \
+		wasmtime-types-24.0.0 \
+		wasmtime-versioned-export-macros-24.0.0 \
+		wasmtime-wasi-24.0.0 \
+		wasmtime-winch-24.0.0 \
+		wasmtime-wit-bindgen-24.0.0 \
 		wast-35.0.2 \
 		wayland-backend-0.3.6 \
 		wayland-client-0.31.5 \
@@ -945,21 +961,22 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		wayland-scanner-0.31.4 \
 		wayland-sys-0.31.4 \
 		web-sys-0.3.70 \
-		webpki-roots-0.24.0 \
+		webpki-0.22.4 \
+		webpki-roots-0.22.6 \
+		webpki-roots-0.25.4 \
 		weezl-0.1.8 \
 		which-4.4.2 \
 		which-6.0.3 \
 		whoami-1.5.1 \
-		wiggle-21.0.1 \
-		wiggle-generate-21.0.1 \
-		wiggle-macro-21.0.1 \
+		wiggle-24.0.0 \
+		wiggle-generate-24.0.0 \
+		wiggle-macro-24.0.0 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
 		winapi-util-0.1.9 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
-		winch-codegen-0.19.1 \
+		winch-codegen-0.22.0 \
 		windows-0.48.0 \
-		windows-0.52.0 \
 		windows-0.54.0 \
 		windows-0.58.0 \
 		windows-core-0.52.0 \
@@ -1014,7 +1031,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		wit-bindgen-rust-macro-0.22.0 \
 		wit-component-0.201.0 \
 		wit-parser-0.201.0 \
-		wit-parser-0.207.0 \
+		wit-parser-0.215.0 \
 		witx-0.9.1 \
 		wyz-0.5.1 \
 		x11-clipboard-0.9.2 \
@@ -1050,16 +1067,17 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		zvariant_derive-4.2.0 \
 		zvariant_utils-2.1.0 \
 		font-kit@git+https://github.com/zed-industries/font-kit?rev=40391b7\#40391b7c0041d8a8572af2afa3de32ae088f0120 \
-		blade-graphics,blade-macros,blade-util@git+https://github.com/kvark/blade?rev=b37a9a994709d256f4634efd29281c78ba89071a\#b37a9a994709d256f4634efd29281c78ba89071a \
+		blade-graphics,blade-macros,blade-util@git+https://github.com/kvark/blade?rev=e142a3a5e678eb6a13e642ad8401b1f3aa38e969\#e142a3a5e678eb6a13e642ad8401b1f3aa38e969 \
 		xkbcommon@git+https://github.com/ConradIrwin/xkbcommon-rs?rev=fcbb4612185cc129ceeff51d22f7fb51810a03b2\#fcbb4612185cc129ceeff51d22f7fb51810a03b2 \
-		tree-sitter-md@git+https://github.com/zed-industries/tree-sitter-markdown?rev=e3855e37f8f2c71aa7513c18a9c95fb7461b1b10\#e3855e37f8f2c71aa7513c18a9c95fb7461b1b10 \
-		tree-sitter-gomod@git+https://github.com/camdencheek/tree-sitter-go-mod?rev=1f55029bacd0a6a11f6eb894c4312d429dcf735c\#1f55029bacd0a6a11f6eb894c4312d429dcf735c \
 		lsp-types@git+https://github.com/zed-industries/lsp-types?rev=72357d6f6d212bdffba3b5ef4b31d8ca856058e7\#72357d6f6d212bdffba3b5ef4b31d8ca856058e7 \
-		tree-sitter,tree-sitter-language@git+https://github.com/tree-sitter/tree-sitter?rev=7f4a57817d58a2f134fe863674acad6bbf007228\#7f4a57817d58a2f134fe863674acad6bbf007228 \
-		tree-sitter-gowork@git+https://github.com/d1y/tree-sitter-go-work?rev=dcbabff454703c3a4bc98a23cf8778d4be46fd22\#dcbabff454703c3a4bc98a23cf8778d4be46fd22 \
+		tree-sitter-md@git+https://github.com/zed-industries/tree-sitter-markdown?rev=4cfa6aad6b75052a5077c80fd934757d9267d81b\#4cfa6aad6b75052a5077c80fd934757d9267d81b \
+		tree-sitter-gomod@git+https://github.com/zed-industries/tree-sitter-go-mod?rev=a9aea5e358cde4d0f8ff20b7bc4fa311e359c7ca\#a9aea5e358cde4d0f8ff20b7bc4fa311e359c7ca \
+		xim,xim-ctext,xim-parser@git+https://github.com/XDeme1/xim-rs?rev=d50d461764c2213655cd9cf65a0ea94c70d3c4fd\#d50d461764c2213655cd9cf65a0ea94c70d3c4fd \
 		alacritty_terminal@git+https://github.com/alacritty/alacritty?rev=91d034ff8b53867143c005acfaa14609147c9a2c\#91d034ff8b53867143c005acfaa14609147c9a2c \
 		cosmic-text@git+https://github.com/pop-os/cosmic-text?rev=542b20c\#542b20ca4376a3b5de5fa629db1a4ace44e18e0c \
-		xim,xim-ctext,xim-parser@git+https://github.com/npmania/xim-rs?rev=27132caffc5b9bc9c432ca4afad184ab6e7c16af\#27132caffc5b9bc9c432ca4afad184ab6e7c16af \
-		tree-sitter-heex@git+https://github.com/phoenixframework/tree-sitter-heex?rev=6dd0303acf7138dd2b9b432a229e16539581c701\#6dd0303acf7138dd2b9b432a229e16539581c701 \
+		tree-sitter-gowork@git+https://github.com/zed-industries/tree-sitter-go-work?rev=acb0617bf7f4fda02c6217676cc64acb89536dc7\#acb0617bf7f4fda02c6217676cc64acb89536dc7 \
+		tree-sitter-heex@git+https://github.com/zed-industries/tree-sitter-heex?rev=1dd45142fbb05562e35b2040c6129c9bca346592\#1dd45142fbb05562e35b2040c6129c9bca346592 \
+		protols-tree-sitter-proto@git+https://github.com/zed-industries/tree-sitter-proto?rev=0848bd30a64be48772e15fbb9d5ba8c0cc5772ad\#0848bd30a64be48772e15fbb9d5ba8c0cc5772ad \
 		async-pipe@git+https://github.com/zed-industries/async-pipe-rs?rev=82d00a04211cf4e1236029aa03e6b6ce2a74c553\#82d00a04211cf4e1236029aa03e6b6ce2a74c553 \
-		nvim-rs@git+https://github.com/KillTheMule/nvim-rs?branch=master\#69500bae73b8b3f02a05b7bee621a0d0e633da6c
+		nvim-rs@git+https://github.com/KillTheMule/nvim-rs?branch=master\#69500bae73b8b3f02a05b7bee621a0d0e633da6c \
+		tree-sitter-yaml@git+https://github.com/zed-industries/tree-sitter-yaml?rev=baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a\#baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a

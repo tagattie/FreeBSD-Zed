@@ -1,4 +1,4 @@
---- crates/fs/src/fs.rs.orig	2024-09-04 14:30:20 UTC
+--- crates/fs/src/fs.rs.orig	2024-09-27 20:04:41 UTC
 +++ crates/fs/src/fs.rs
 @@ -1,9 +1,9 @@ use git::GitHostingProviderRegistry;
  use anyhow::{anyhow, Result};
@@ -12,7 +12,7 @@
  use std::{fs::File, os::fd::AsFd};
  
  #[cfg(unix)]
-@@ -314,7 +314,7 @@ impl Fs for RealFs {
+@@ -334,7 +334,7 @@ impl Fs for RealFs {
          Ok(())
      }
  
@@ -21,7 +21,7 @@
      async fn trash_file(&self, path: &Path, _options: RemoveOptions) -> Result<()> {
          let file = File::open(path)?;
          match trash::trash_file(&file.as_fd()).await {
-@@ -328,7 +328,7 @@ impl Fs for RealFs {
+@@ -366,7 +366,7 @@ impl Fs for RealFs {
          self.trash_file(path, options).await
      }
  
@@ -30,7 +30,7 @@
      async fn trash_dir(&self, path: &Path, options: RemoveOptions) -> Result<()> {
          self.trash_file(path, options).await
      }
-@@ -350,7 +350,7 @@ impl Fs for RealFs {
+@@ -407,7 +407,7 @@ impl Fs for RealFs {
  
      async fn atomic_write(&self, path: PathBuf, data: String) -> Result<()> {
          smol::unblock(move || {
@@ -39,7 +39,7 @@
                  // Use the directory of the destination as temp dir to avoid
                  // invalid cross-device link error, and XDG_CACHE_DIR for fallback.
                  // See https://github.com/zed-industries/zed/pull/8437 for more details.
-@@ -492,7 +492,7 @@ impl Fs for RealFs {
+@@ -571,7 +571,7 @@ impl Fs for RealFs {
          )
      }
  
@@ -48,7 +48,7 @@
      async fn watch(
          &self,
          path: &Path,
-@@ -642,7 +642,7 @@ impl Fs for RealFs {
+@@ -749,7 +749,7 @@ impl Fs for RealFs {
      }
  }
  
@@ -57,7 +57,7 @@
  impl Watcher for RealWatcher {
      fn add(&self, _: &Path) -> Result<()> {
          Ok(())
-@@ -653,7 +653,7 @@ impl Watcher for RealWatcher {
+@@ -760,7 +760,7 @@ impl Watcher for RealWatcher {
      }
  }
  
@@ -66,7 +66,7 @@
  impl Watcher for RealWatcher {
      fn add(&self, path: &Path) -> Result<()> {
          use notify::Watcher;
-@@ -1864,7 +1864,7 @@ mod tests {
+@@ -2004,7 +2004,7 @@ mod tests {
      }
  }
  
@@ -75,7 +75,7 @@
  pub mod watcher {
      use std::sync::OnceLock;
  
-@@ -1873,7 +1873,10 @@ pub mod watcher {
+@@ -2013,7 +2013,10 @@ pub mod watcher {
  
      pub struct GlobalWatcher {
          // two mutexes because calling inotify.add triggers an inotify.event, which needs watchers.
