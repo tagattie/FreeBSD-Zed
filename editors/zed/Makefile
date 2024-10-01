@@ -25,7 +25,8 @@ LIB_DEPENDS=	libzstd.so:archivers/zstd \
 		libxkbcommon.so:x11/libxkbcommon
 RUN_DEPENDS=	xdg-desktop-portal-gtk>0:x11/xdg-desktop-portal-gtk
 
-USES=		cargo desktop-file-utils gettext-runtime:build ssl xorg
+USES=		cargo cmake:indirect desktop-file-utils gettext-runtime:build \
+		ssl xorg
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	zed-industries
