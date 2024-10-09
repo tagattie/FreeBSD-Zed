@@ -1,6 +1,6 @@
 PORTNAME=	zed
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.154.3
+DISTVERSION=	0.155.2
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-editor
 
@@ -23,10 +23,11 @@ LIB_DEPENDS=	libzstd.so:archivers/zstd \
 		libwayland-client.so:graphics/wayland \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libxkbcommon.so:x11/libxkbcommon
-RUN_DEPENDS=	xdg-desktop-portal-gtk>0:x11/xdg-desktop-portal-gtk
+RUN_DEPENDS=	npm${NODEJS_SUFFIX}>0:www/npm${NODEJS_SUFFIX} \
+		xdg-desktop-portal-gtk>0:x11/xdg-desktop-portal-gtk
 
 USES=		cargo cmake:indirect desktop-file-utils gettext-runtime:build \
-		ssl xorg
+		nodejs:lts,run ssl xorg
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	zed-industries
@@ -56,6 +57,10 @@ PLIST_FILES=	bin/zedit \
 PORTDOCS=	CONTRIBUTING.md README.md
 
 OPTIONS_DEFINE=	DOCS
+
+post-patch:
+	${REINPLACE_CMD} -e 's|/etc|${LOCALBASE}/etc|g' \
+		${WRKSRC}/cargo-crates/fontdb-0.18.0/src/lib.rs
 
 post-build:
 	${SETENV} ${MAKE_ENV} envsubst < \

@@ -1,6 +1,6 @@
---- crates/vim/src/state.rs.orig	2024-09-27 20:04:41 UTC
+--- crates/vim/src/state.rs.orig	2024-10-02 15:03:39 UTC
 +++ crates/vim/src/state.rs
-@@ -226,9 +226,9 @@ impl VimGlobals {
+@@ -227,9 +227,9 @@ impl VimGlobals {
                      }
                      '*' => {
                          self.registers.insert('"', content.clone());
@@ -12,7 +12,7 @@
                          cx.write_to_clipboard(content.into());
                      }
                      '"' => {
-@@ -297,11 +297,11 @@ impl VimGlobals {
+@@ -298,11 +298,11 @@ impl VimGlobals {
              '_' | ':' | '.' | '#' | '=' => None,
              '+' => cx.read_from_clipboard().map(|item| item.into()),
              '*' => {
