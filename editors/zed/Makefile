@@ -1,6 +1,6 @@
 PORTNAME=	zed
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.155.2
+DISTVERSION=	0.157.5
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-editor
 
@@ -68,11 +68,11 @@ post-build:
 		${WRKSRC}/crates/zed/resources/zed.desktop
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/target/*-unknown-freebsd/release/cli \
+	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/${CARGO_BUILD_TARGET}/release/cli \
 		${STAGEDIR}${PREFIX}/bin/zedit
-	${INSTALL_PROGRAM} ${WRKDIR}/target/*-unknown-freebsd/release/remote_server \
+	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/${CARGO_BUILD_TARGET}/release/remote_server \
 		${STAGEDIR}${PREFIX}/bin/zed-remote-server
-	${INSTALL_PROGRAM} ${WRKDIR}/target/*-unknown-freebsd/release/zed \
+	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/${CARGO_BUILD_TARGET}/release/zed \
 		${STAGEDIR}${PREFIX}/libexec/zed-editor
 	${INSTALL_DATA} ${WRKSRC}/crates/zed/resources/${PORTNAME}.desktop \
 		${STAGEDIR}${DESKTOPDIR}/dev.zed.Zed.desktop

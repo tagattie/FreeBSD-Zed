@@ -1,6 +1,6 @@
---- crates/client/src/telemetry.rs.orig	2024-09-27 20:04:41 UTC
+--- crates/client/src/telemetry.rs.orig	2024-10-16 18:48:23 UTC
 +++ crates/client/src/telemetry.rs
-@@ -105,6 +105,10 @@ pub fn os_name() -> String {
+@@ -106,6 +106,10 @@ pub fn os_name() -> String {
      {
          format!("Linux {}", gpui::guess_compositor())
      }
@@ -11,7 +11,7 @@
  
      #[cfg(target_os = "windows")]
      {
-@@ -130,7 +134,7 @@ pub fn os_version() -> String {
+@@ -131,7 +135,7 @@ pub fn os_version() -> String {
              .to_string()
          }
      }

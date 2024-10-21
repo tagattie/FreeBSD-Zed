@@ -1,6 +1,6 @@
---- crates/gpui/src/style.rs.orig	2024-09-27 20:04:41 UTC
+--- crates/gpui/src/style.rs.orig	2024-10-16 18:48:23 UTC
 +++ crates/gpui/src/style.rs
-@@ -342,7 +342,7 @@ impl Default for TextStyle {
+@@ -344,7 +344,7 @@ impl Default for TextStyle {
          TextStyle {
              color: black(),
              // todo(linux) make this configurable or choose better default

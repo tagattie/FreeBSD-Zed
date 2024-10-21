@@ -1,4 +1,4 @@
---- crates/fs/src/fs.rs.orig	2024-09-27 20:04:41 UTC
+--- crates/fs/src/fs.rs.orig	2024-10-16 18:48:23 UTC
 +++ crates/fs/src/fs.rs
 @@ -1,9 +1,9 @@ use git::GitHostingProviderRegistry;
  use anyhow::{anyhow, Result};
@@ -48,7 +48,7 @@
      async fn watch(
          &self,
          path: &Path,
-@@ -749,7 +749,7 @@ impl Fs for RealFs {
+@@ -773,7 +773,7 @@ impl Fs for RealFs {
      }
  }
  
@@ -57,7 +57,7 @@
  impl Watcher for RealWatcher {
      fn add(&self, _: &Path) -> Result<()> {
          Ok(())
-@@ -760,7 +760,7 @@ impl Watcher for RealWatcher {
+@@ -784,7 +784,7 @@ impl Watcher for RealWatcher {
      }
  }
  
@@ -66,7 +66,7 @@
  impl Watcher for RealWatcher {
      fn add(&self, path: &Path) -> Result<()> {
          use notify::Watcher;
-@@ -2004,7 +2004,7 @@ mod tests {
+@@ -2028,7 +2028,7 @@ mod tests {
      }
  }
  
@@ -75,7 +75,7 @@
  pub mod watcher {
      use std::sync::OnceLock;
  
-@@ -2013,7 +2013,10 @@ pub mod watcher {
+@@ -2037,7 +2037,10 @@ pub mod watcher {
  
      pub struct GlobalWatcher {
          // two mutexes because calling inotify.add triggers an inotify.event, which needs watchers.

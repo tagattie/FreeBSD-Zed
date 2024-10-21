@@ -1,6 +1,6 @@
---- crates/terminal/src/terminal.rs.orig	2024-09-04 14:30:20 UTC
+--- crates/terminal/src/terminal.rs.orig	2024-10-16 18:48:23 UTC
 +++ crates/terminal/src/terminal.rs
-@@ -768,7 +768,7 @@ impl Terminal {
+@@ -771,7 +771,7 @@ impl Terminal {
              InternalEvent::SetSelection(selection) => {
                  term.selection = selection.as_ref().map(|(sel, _)| sel.clone());
  
@@ -9,7 +9,7 @@
                  if let Some(selection_text) = term.selection_to_string() {
                      cx.write_to_primary(ClipboardItem::new_string(selection_text));
                  }
-@@ -789,7 +789,7 @@ impl Terminal {
+@@ -792,7 +792,7 @@ impl Terminal {
                      selection.update(point, side);
                      term.selection = Some(selection);
  
@@ -18,7 +18,7 @@
                      if let Some(selection_text) = term.selection_to_string() {
                          cx.write_to_primary(ClipboardItem::new_string(selection_text));
                      }
-@@ -1331,7 +1331,7 @@ impl Terminal {
+@@ -1339,7 +1339,7 @@ impl Terminal {
                              .push_back(InternalEvent::SetSelection(Some((sel, point))));
                      }
                  }

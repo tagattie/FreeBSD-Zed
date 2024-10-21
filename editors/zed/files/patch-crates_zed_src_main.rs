@@ -1,6 +1,6 @@
---- crates/zed/src/main.rs.orig	2024-10-02 15:03:39 UTC
+--- crates/zed/src/main.rs.orig	2024-10-16 18:48:23 UTC
 +++ crates/zed/src/main.rs
-@@ -96,12 +96,12 @@ fn fail_to_open_window(e: anyhow::Error, _cx: &mut App
+@@ -97,12 +97,12 @@ fn fail_to_open_window(e: anyhow::Error, _cx: &mut App
      eprintln!(
          "Zed failed to open a window: {e:?}. See https://zed.dev/docs/linux for troubleshooting steps."
      );
@@ -15,7 +15,7 @@
      {
          use ashpd::desktop::notification::{Notification, NotificationProxy, Priority};
          _cx.spawn(|_cx| async move {
-@@ -235,7 +235,7 @@ fn init_ui(
+@@ -236,7 +236,7 @@ fn init_ui(
  
      load_embedded_fonts(cx);
  
@@ -24,7 +24,7 @@
      crate::zed::linux_prompts::init(cx);
  
      app_state.languages.set_theme(cx.theme().clone());
-@@ -352,7 +352,7 @@ fn main() {
+@@ -354,7 +354,7 @@ fn main() {
  
      let (open_listener, mut open_rx) = OpenListener::new();
  
@@ -33,7 +33,7 @@
      {
          if env::var("ZED_STATELESS").is_err() {
              if crate::zed::listen_for_cli_connections(open_listener.clone()).is_err() {
-@@ -991,7 +991,7 @@ fn init_logger() {
+@@ -1002,7 +1002,7 @@ fn init_logger() {
                      config_builder.set_time_offset(offset);
                  }
  
