@@ -1,6 +1,6 @@
---- crates/zed/src/zed/open_listener.rs.orig	2024-10-16 18:48:23 UTC
+--- crates/zed/src/zed/open_listener.rs.orig	2024-10-24 17:42:16 UTC
 +++ crates/zed/src/zed/open_listener.rs
-@@ -139,7 +139,7 @@ impl OpenListener {
+@@ -140,7 +140,7 @@ impl OpenListener {
      }
  }
  

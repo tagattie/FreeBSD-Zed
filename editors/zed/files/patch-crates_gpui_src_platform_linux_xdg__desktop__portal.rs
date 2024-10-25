@@ -1,6 +1,6 @@
---- crates/gpui/src/platform/linux/xdg_desktop_portal.rs.orig	2024-07-11 12:05:16 UTC
+--- crates/gpui/src/platform/linux/xdg_desktop_portal.rs.orig	2024-10-24 17:42:16 UTC
 +++ crates/gpui/src/platform/linux/xdg_desktop_portal.rs
-@@ -160,7 +160,7 @@ impl WindowAppearance {
+@@ -162,7 +162,7 @@ impl WindowAppearance {
          }
      }
  

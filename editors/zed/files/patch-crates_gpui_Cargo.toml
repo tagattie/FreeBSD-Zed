@@ -1,6 +1,6 @@
---- crates/gpui/Cargo.toml.orig	2024-09-27 20:04:41 UTC
+--- crates/gpui/Cargo.toml.orig	2024-10-24 17:42:16 UTC
 +++ crates/gpui/Cargo.toml
-@@ -102,17 +102,17 @@ objc = "0.2"
+@@ -139,10 +139,10 @@ objc = "0.2"
  metal = "0.29"
  objc = "0.2"
  
@@ -8,16 +8,8 @@
 +[target.'cfg(any(target_os = "linux", target_os = "freebsd", target_os = "macos"))'.dependencies]
  pathfinder_geometry = "0.5"
  
--[target.'cfg(any(target_os = "linux", target_os = "windows"))'.dependencies]
-+[target.'cfg(any(target_os = "linux", target_os = "freebsd", target_os = "windows"))'.dependencies]
- blade-graphics.workspace = true
- blade-macros.workspace = true
- blade-util.workspace = true
- bytemuck = "1"
- flume = "0.11"
- 
 -[target.'cfg(target_os = "linux")'.dependencies]
 +[target.'cfg(any(target_os = "linux", target_os = "freebsd"))'.dependencies]
- as-raw-xcb-connection = "1"
- ashpd.workspace = true
- calloop = "0.13.0"
+ # Always used
+ flume = "0.11"
+ oo7 = "0.3.0"

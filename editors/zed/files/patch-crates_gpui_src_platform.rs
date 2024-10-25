@@ -1,6 +1,6 @@
---- crates/gpui/src/platform.rs.orig	2024-09-27 20:04:41 UTC
+--- crates/gpui/src/platform.rs.orig	2024-10-24 17:42:16 UTC
 +++ crates/gpui/src/platform.rs
-@@ -4,13 +4,13 @@ mod keystroke;
+@@ -4,14 +4,14 @@ mod keystroke;
  mod app_menu;
  mod keystroke;
  
@@ -11,12 +11,13 @@
  #[cfg(target_os = "macos")]
  mod mac;
  
--#[cfg(any(target_os = "linux", target_os = "windows", feature = "macos-blade"))]
-+#[cfg(any(target_os = "linux", target_os = "freebsd", target_os = "windows", feature = "macos-blade"))]
- mod blade;
- 
- #[cfg(any(test, feature = "test-support"))]
-@@ -53,7 +53,7 @@ pub use keystroke::*;
+ #[cfg(any(
+-    all(target_os = "linux", any(feature = "x11", feature = "wayland")),
++    all(any(target_os = "linux", target_os = "freebsd"), any(feature = "x11", feature = "wayland")),
+     target_os = "windows",
+     feature = "macos-blade"
+ ))]
+@@ -57,7 +57,7 @@ pub use keystroke::*;
  pub use app_menu::*;
  pub use keystroke::*;
  
@@ -25,7 +26,7 @@
  pub(crate) use linux::*;
  #[cfg(target_os = "macos")]
  pub(crate) use mac::*;
-@@ -68,7 +68,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
+@@ -72,7 +72,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
      Rc::new(MacPlatform::new(headless))
  }
  
@@ -34,7 +35,7 @@
  pub(crate) fn current_platform(headless: bool) -> Rc<dyn Platform> {
      if headless {
          return Rc::new(HeadlessClient::new());
-@@ -84,7 +84,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
+@@ -92,7 +92,7 @@ pub(crate) fn current_platform(headless: bool) -> Rc<d
  
  /// Return which compositor we're guessing we'll use.
  /// Does not attempt to connect to the given compositor
@@ -43,7 +44,7 @@
  #[inline]
  pub fn guess_compositor() -> &'static str {
      if std::env::var_os("ZED_HEADLESS").is_some() {
-@@ -174,10 +174,10 @@ pub(crate) trait Platform: 'static {
+@@ -190,10 +190,10 @@ pub(crate) trait Platform: 'static {
      fn set_cursor_style(&self, style: CursorStyle);
      fn should_auto_hide_scrollbars(&self) -> bool;
  
@@ -56,7 +57,34 @@
      fn read_from_primary(&self) -> Option<ClipboardItem>;
      fn read_from_clipboard(&self) -> Option<ClipboardItem>;
  
-@@ -540,7 +540,7 @@ impl PlatformInputHandler {
+@@ -506,7 +506,7 @@ impl AtlasKey {
+ 
+ impl AtlasKey {
+     #[cfg_attr(
+-        all(target_os = "linux", not(any(feature = "x11", feature = "wayland"))),
++        all(any(target_os = "linux", target_os = "freebsd"), not(any(feature = "x11", feature = "wayland"))),
+         allow(dead_code)
+     )]
+     pub(crate) fn texture_kind(&self) -> AtlasTextureKind {
+@@ -570,7 +570,7 @@ pub(crate) struct AtlasTextureId {
+ #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
+ #[repr(C)]
+ #[cfg_attr(
+-    all(target_os = "linux", not(any(feature = "x11", feature = "wayland"))),
++    all(any(target_os = "linux", target_os = "freebsd"), not(any(feature = "x11", feature = "wayland"))),
+     allow(dead_code)
+ )]
+ pub(crate) enum AtlasTextureKind {
+@@ -601,7 +601,7 @@ pub(crate) struct PlatformInputHandler {
+ }
+ 
+ #[cfg_attr(
+-    all(target_os = "linux", not(any(feature = "x11", feature = "wayland"))),
++    all(any(target_os = "linux", target_os = "freebsd"), not(any(feature = "x11", feature = "wayland"))),
+     allow(dead_code)
+ )]
+ impl PlatformInputHandler {
+@@ -623,7 +623,7 @@ impl PlatformInputHandler {
              .flatten()
      }
  
@@ -65,7 +93,16 @@
      fn text_for_range(&mut self, range_utf16: Range<usize>) -> Option<String> {
          self.cx
              .update(|cx| self.handler.text_for_range(range_utf16, cx))
-@@ -735,17 +735,17 @@ pub(crate) struct WindowParams {
+@@ -812,7 +812,7 @@ pub struct WindowOptions {
+ /// The variables that can be configured when creating a new window
+ #[derive(Debug)]
+ #[cfg_attr(
+-    all(target_os = "linux", not(any(feature = "x11", feature = "wayland"))),
++    all(any(target_os = "linux", target_os = "freebsd"), not(any(feature = "x11", feature = "wayland"))),
+     allow(dead_code)
+ )]
+ pub(crate) struct WindowParams {
+@@ -823,17 +823,17 @@ pub(crate) struct WindowParams {
      pub titlebar: Option<TitlebarOptions>,
  
      /// The kind of window to create
@@ -86,8 +123,8 @@
 +    #[cfg_attr(any(target_os = "linux", target_os = "freebsd"), allow(dead_code))]
      pub show: bool,
  
-     pub display_id: Option<DisplayId>,
-@@ -1250,7 +1250,7 @@ impl ClipboardString {
+     #[cfg_attr(feature = "wayland", allow(dead_code))]
+@@ -1339,7 +1339,7 @@ impl ClipboardString {
              .and_then(|m| serde_json::from_str(m).ok())
      }
  

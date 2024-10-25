@@ -1,6 +1,6 @@
---- crates/editor/src/editor.rs.orig	2024-10-16 18:48:23 UTC
+--- crates/editor/src/editor.rs.orig	2024-10-24 17:42:16 UTC
 +++ crates/editor/src/editor.rs
-@@ -2470,7 +2470,7 @@ impl Editor {
+@@ -2504,7 +2504,7 @@ impl Editor {
          cx.invalidate_character_coordinates();
  
          // Copy selections to primary selection buffer
