@@ -1,17 +1,29 @@
---- crates/cli/src/main.rs.orig	2024-10-16 18:48:23 UTC
+--- crates/cli/src/main.rs.orig	2024-12-04 17:01:03 UTC
 +++ crates/cli/src/main.rs
-@@ -1,4 +1,4 @@
--#![cfg_attr(any(target_os = "linux", target_os = "windows"), allow(dead_code))]
-+#![cfg_attr(any(target_os = "linux", target_os = "freebsd", target_os = "windows"), allow(dead_code))]
+@@ -91,7 +91,7 @@ fn main() -> Result<()> {
  
- use anyhow::{Context, Result};
- use clap::Parser;
-@@ -215,7 +215,7 @@ fn main() -> Result<()> {
-     Ok(())
+ fn main() -> Result<()> {
+     // Exit flatpak sandbox if needed
+-    #[cfg(any(target_os = "linux", target_os = "freebsd"))]
++    #[cfg(target_os = "linux")]
+     {
+         flatpak::try_restart_to_host();
+         flatpak::ld_extra_libs();
+@@ -109,7 +109,7 @@ fn main() -> Result<()> {
+     }
+     let args = Args::parse();
+ 
+-    #[cfg(any(target_os = "linux", target_os = "freebsd"))]
++    #[cfg(target_os = "linux")]
+     let args = flatpak::set_bin_if_no_escape(args);
+ 
+     let app = Detect::detect(args.zed.as_deref()).context("Bundle detection")?;
+@@ -347,7 +347,7 @@ mod linux {
+     }
  }
  
--#[cfg(target_os = "linux")]
-+#[cfg(any(target_os = "linux", target_os = "freebsd"))]
- mod linux {
-     use std::{
-         env,
+-#[cfg(any(target_os = "linux", target_os = "freebsd"))]
++#[cfg(target_os = "linux")]
+ mod flatpak {
+     use std::ffi::OsString;
+     use std::path::PathBuf;
