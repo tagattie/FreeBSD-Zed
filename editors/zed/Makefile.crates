@@ -20,7 +20,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		anstyle-query-1.1.2 \
 		anstyle-wincon-3.0.6 \
 		any_vec-0.14.0 \
-		anyhow-1.0.93 \
+		anyhow-1.0.94 \
 		approx-0.5.1 \
 		arbitrary-1.4.1 \
 		arg_enum_proc_macro-0.3.4 \
@@ -31,7 +31,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		ascii-1.1.0 \
 		ash-0.38.0+1.3.281 \
 		ash-window-0.13.0 \
-		ashpd-0.9.2 \
+		ashpd-0.10.2 \
 		async-attributes-1.1.2 \
 		async-broadcast-0.7.1 \
 		async-channel-1.9.0 \
@@ -60,10 +60,9 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		async-stream-impl-0.3.6 \
 		async-tar-0.5.0 \
 		async-task-4.7.1 \
-		async-tls-0.12.0 \
 		async-tls-0.13.0 \
 		async-trait-0.1.83 \
-		async-tungstenite-0.22.2 \
+		async-tungstenite-0.25.1 \
 		async-tungstenite-0.28.0 \
 		async-watch-0.3.1 \
 		async_zip-0.0.17 \
@@ -118,7 +117,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		bitflags-2.6.0 \
 		bitstream-io-2.6.0 \
 		bitvec-1.0.1 \
-		blake3-1.5.4 \
+		blake3-1.5.5 \
 		block-0.1.6 \
 		block-buffer-0.10.4 \
 		block-padding-0.3.3 \
@@ -131,13 +130,15 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		by_address-1.2.1 \
 		bytecheck-0.6.12 \
 		bytecheck_derive-0.6.12 \
-		bytemuck-1.19.0 \
+		bytemuck-1.20.0 \
 		bytemuck_derive-1.8.0 \
 		byteorder-1.5.0 \
 		byteorder-lite-0.1.0 \
 		bytes-0.4.12 \
 		bytes-1.8.0 \
 		bytes-utils-0.1.4 \
+		bzip2-0.4.4 \
+		bzip2-sys-0.1.11+1.0.8 \
 		calloop-0.13.0 \
 		calloop-wayland-source-0.3.0 \
 		camino-1.1.9 \
@@ -148,7 +149,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		cap-std-3.4.1 \
 		cap-time-ext-3.4.1 \
 		cargo-platform-0.1.8 \
-		cargo_metadata-0.19.0 \
+		cargo_metadata-0.19.1 \
 		cargo_toml-0.20.5 \
 		cast-0.3.0 \
 		cbc-0.1.2 \
@@ -172,9 +173,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		clap_complete-4.5.38 \
 		clap_derive-4.5.18 \
 		clap_lex-0.7.3 \
-		clickhouse-0.11.6 \
-		clickhouse-derive-0.1.1 \
-		clickhouse-rs-cityhash-sys-0.1.2 \
 		cobs-0.2.3 \
 		cocoa-0.25.0 \
 		cocoa-0.26.0 \
@@ -189,6 +187,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		const-oid-0.9.6 \
 		const-random-0.1.18 \
 		const-random-macro-0.1.16 \
+		constant_time_eq-0.1.5 \
 		constant_time_eq-0.3.1 \
 		convert_case-0.4.0 \
 		convert_case-0.6.0 \
@@ -202,8 +201,8 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		core-services-0.2.1 \
 		core-text-20.1.0 \
 		coreaudio-rs-0.11.3 \
+		coreaudio-rs-0.12.1 \
 		coreaudio-sys-0.2.16 \
-		cpal-0.15.3 \
 		cpp_demangle-0.4.4 \
 		cpufeatures-0.2.15 \
 		cranelift-bforest-0.111.2 \
@@ -235,6 +234,11 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		ctor-0.2.9 \
 		ctrlc-3.4.5 \
 		cursor-icon-1.1.0 \
+		cxx-1.0.133 \
+		cxx-build-1.0.133 \
+		cxxbridge-cmd-1.0.133 \
+		cxxbridge-flags-1.0.133 \
+		cxxbridge-macro-1.0.133 \
 		dashmap-5.5.3 \
 		dashmap-6.1.0 \
 		dasp_sample-0.11.0 \
@@ -258,6 +262,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		dotenvy-0.15.7 \
 		downcast-rs-1.2.1 \
 		doxygen-rs-0.4.2 \
+		dunce-1.0.5 \
 		dwrote-0.11.2 \
 		dyn-clone-1.0.17 \
 		ec4rs-1.1.1 \
@@ -265,7 +270,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		either-1.13.0 \
 		elasticlunr-rs-3.0.2 \
 		elliptic-curve-0.12.3 \
-		embed-resource-2.5.1 \
+		embed-resource-3.0.1 \
 		embedded-io-0.4.0 \
 		embedded-io-0.6.1 \
 		emojis-0.6.4 \
@@ -322,6 +327,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		form_urlencoded-1.2.1 \
 		freetype-sys-0.20.1 \
 		fs-set-times-0.20.1 \
+		fs2-0.4.3 \
 		fsevent-sys-3.1.0 \
 		fsevent-sys-4.1.0 \
 		funty-2.0.0 \
@@ -439,13 +445,14 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		io-lifetimes-1.0.11 \
 		io-lifetimes-2.0.3 \
 		iovec-0.1.4 \
-		ipc-channel-0.18.3 \
+		ipc-channel-0.19.0 \
 		ipnet-2.10.1 \
 		is-docker-0.2.0 \
 		is-terminal-0.4.13 \
 		is-wsl-0.4.0 \
 		is_terminal_polyfill-1.70.1 \
 		itertools-0.10.5 \
+		itertools-0.11.0 \
 		itertools-0.12.1 \
 		itertools-0.13.0 \
 		itoa-1.0.11 \
@@ -455,9 +462,8 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		jpeg-decoder-0.3.1 \
 		js-sys-0.3.72 \
 		jsonwebtoken-9.3.0 \
-		jupyter-protocol-0.3.0 \
-		jupyter-serde-0.6.0 \
-		jupyter-websocket-client-0.5.0 \
+		jupyter-protocol-0.5.0 \
+		jupyter-websocket-client-0.8.0 \
 		khronos-egl-6.0.0 \
 		kqueue-1.0.8 \
 		kqueue-sys-1.0.4 \
@@ -466,7 +472,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		lazy_static-1.5.0 \
 		leb128-0.2.5 \
 		lebe-0.5.2 \
-		libc-0.2.164 \
+		libc-0.2.162 \
 		libdbus-sys-0.2.5 \
 		libfuzzer-sys-0.4.8 \
 		libgit2-sys-0.17.0+1.8.1 \
@@ -474,8 +480,9 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		libm-0.2.11 \
 		libmimalloc-sys-0.1.39 \
 		libredox-0.1.3 \
-		libsqlite3-sys-0.28.0 \
+		libsqlite3-sys-0.30.1 \
 		libz-sys-1.1.20 \
+		link-cplusplus-1.0.9 \
 		linkify-0.10.0 \
 		linkme-0.3.31 \
 		linkme-impl-0.3.31 \
@@ -487,8 +494,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		log-0.4.22 \
 		loop9-0.1.5 \
 		lru-0.12.5 \
-		lz4-1.28.0 \
-		lz4-sys-1.11.1+lz4-1.10.0 \
 		mac-0.1.1 \
 		mach2-0.4.2 \
 		malloc_buf-0.0.6 \
@@ -521,7 +526,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		nanoid-0.4.0 \
 		nanorand-0.7.0 \
 		native-tls-0.2.12 \
-		nbformat-0.7.0 \
+		nbformat-0.9.0 \
 		ndk-0.8.0 \
 		ndk-context-0.1.1 \
 		ndk-sys-0.5.0+25.2.9519653 \
@@ -581,11 +586,16 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		parking-2.2.1 \
 		parking_lot-0.12.3 \
 		parking_lot_core-0.9.10 \
+		password-hash-0.4.2 \
 		password-hash-0.5.0 \
 		paste-1.0.15 \
-		pathdiff-0.2.2 \
+		pathdiff-0.2.3 \
 		pathfinder_geometry-0.5.1 \
 		pathfinder_simd-0.5.4 \
+		pbjson-0.6.0 \
+		pbjson-build-0.6.2 \
+		pbjson-types-0.6.0 \
+		pbkdf2-0.11.0 \
 		pbkdf2-0.12.2 \
 		pem-3.0.4 \
 		pem-rfc7468-0.7.0 \
@@ -632,14 +642,18 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		proc-macro-error-attr-1.0.4 \
 		proc-macro-error-attr2-2.0.0 \
 		proc-macro-error2-2.0.1 \
-		proc-macro2-1.0.89 \
+		proc-macro2-1.0.92 \
 		profiling-1.0.16 \
 		profiling-procmacros-1.0.16 \
 		prometheus-0.13.4 \
 		prost-0.9.0 \
+		prost-0.12.6 \
 		prost-build-0.9.0 \
+		prost-build-0.12.6 \
 		prost-derive-0.9.0 \
+		prost-derive-0.12.6 \
 		prost-types-0.9.0 \
+		prost-types-0.12.6 \
 		protobuf-2.28.0 \
 		psm-0.1.24 \
 		ptr_meta-0.1.4 \
@@ -686,16 +700,15 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		resvg-0.44.0 \
 		rfc6979-0.3.1 \
 		rgb-0.8.50 \
-		ring-0.16.20 \
 		ring-0.17.8 \
 		rkyv-0.7.45 \
 		rkyv_derive-0.7.45 \
 		rmp-0.8.14 \
 		rmpv-1.3.0 \
-		rodio-0.19.0 \
+		rodio-0.20.1 \
 		roxmltree-0.20.0 \
-		rsa-0.9.6 \
-		runtimelib-0.22.0 \
+		rsa-0.9.7 \
+		runtimelib-0.24.0 \
 		rust-embed-8.5.0 \
 		rust-embed-impl-8.5.0 \
 		rust-embed-utils-8.5.0 \
@@ -707,9 +720,8 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		rustix-0.37.27 \
 		rustix-0.38.40 \
 		rustix-openpty-0.1.1 \
-		rustls-0.20.9 \
 		rustls-0.21.12 \
-		rustls-0.23.16 \
+		rustls-0.23.18 \
 		rustls-native-certs-0.6.3 \
 		rustls-native-certs-0.8.0 \
 		rustls-pemfile-1.0.4 \
@@ -727,6 +739,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		schemars_derive-0.8.21 \
 		scoped-tls-1.0.1 \
 		scopeguard-1.2.0 \
+		scratch-1.0.7 \
 		scrypt-0.11.0 \
 		sct-0.7.1 \
 		sea-bae-0.2.1 \
@@ -735,7 +748,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		sea-query-0.32.0 \
 		sea-query-binder-0.7.0 \
 		seahash-4.1.0 \
-		sealed-0.4.0 \
 		sec1-0.3.0 \
 		security-framework-2.11.1 \
 		security-framework-sys-2.12.1 \
@@ -743,10 +755,9 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		semver-1.0.23 \
 		serde-1.0.215 \
 		serde_derive-1.0.215 \
-		serde_derive_internals-0.26.0 \
 		serde_derive_internals-0.29.1 \
 		serde_fmt-1.0.3 \
-		serde_json-1.0.133 \
+		serde_json-1.0.132 \
 		serde_json_lenient-0.2.3 \
 		serde_path_to_error-0.1.16 \
 		serde_qs-0.8.5 \
@@ -786,20 +797,19 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		socket2-0.4.10 \
 		socket2-0.5.7 \
 		spdx-0.10.7 \
-		spin-0.5.2 \
 		spin-0.9.8 \
 		spirv-0.3.0+sdk-1.3.268.0 \
 		spki-0.6.0 \
 		spki-0.7.3 \
 		sptr-0.3.2 \
 		sqlformat-0.2.6 \
-		sqlx-0.8.0 \
-		sqlx-core-0.8.0 \
-		sqlx-macros-0.8.0 \
-		sqlx-macros-core-0.8.0 \
-		sqlx-mysql-0.8.0 \
-		sqlx-postgres-0.8.0 \
-		sqlx-sqlite-0.8.0 \
+		sqlx-0.8.1 \
+		sqlx-core-0.8.1 \
+		sqlx-macros-0.8.1 \
+		sqlx-macros-core-0.8.1 \
+		sqlx-mysql-0.8.1 \
+		sqlx-postgres-0.8.1 \
+		sqlx-sqlite-0.8.1 \
 		stable_deref_trait-1.2.0 \
 		static_assertions-1.1.0 \
 		strict-num-0.1.1 \
@@ -893,7 +903,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		tracing-subscriber-0.3.18 \
 		tree-sitter-0.23.2 \
 		tree-sitter-bash-0.23.3 \
-		tree-sitter-c-0.23.1 \
+		tree-sitter-c-0.23.2 \
 		tree-sitter-cpp-0.23.4 \
 		tree-sitter-css-0.23.1 \
 		tree-sitter-diff-0.1.0 \
@@ -911,7 +921,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		tree-sitter-typescript-0.23.2 \
 		try-lock-0.2.5 \
 		ttf-parser-0.21.1 \
-		tungstenite-0.19.0 \
 		tungstenite-0.20.1 \
 		tungstenite-0.21.0 \
 		tungstenite-0.24.0 \
@@ -933,7 +942,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		unicode-xid-0.2.6 \
 		unicode_categories-0.1.1 \
 		unindent-0.1.11 \
-		untrusted-0.7.1 \
 		untrusted-0.9.0 \
 		url-2.5.3 \
 		urlencoding-2.1.3 \
@@ -1005,7 +1013,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		web-time-1.1.0 \
 		webpki-0.22.4 \
 		webpki-roots-0.22.6 \
-		webpki-roots-0.25.4 \
+		webpki-roots-0.26.7 \
 		weezl-0.1.8 \
 		which-4.4.2 \
 		which-6.0.3 \
@@ -1099,8 +1107,11 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		yoke-0.7.4 \
 		yoke-derive-0.7.4 \
 		zbus-4.4.0 \
+		zbus-5.1.1 \
 		zbus_macros-4.4.0 \
+		zbus_macros-5.1.1 \
 		zbus_names-3.0.0 \
+		zbus_names-4.1.0 \
 		zed_extension_api-0.1.0 \
 		zeno-0.2.3 \
 		zerocopy-0.7.35 \
@@ -1112,6 +1123,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		zeromq-0.4.1 \
 		zerovec-0.10.4 \
 		zerovec-derive-0.10.3 \
+		zip-0.6.6 \
 		zstd-0.11.2+zstd.1.5.2 \
 		zstd-safe-5.0.2+zstd.1.5.2 \
 		zstd-sys-2.0.13+zstd.1.5.6 \
@@ -1119,8 +1131,11 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		zune-inflate-0.2.54 \
 		zune-jpeg-0.4.13 \
 		zvariant-4.2.0 \
+		zvariant-5.1.0 \
 		zvariant_derive-4.2.0 \
+		zvariant_derive-5.1.0 \
 		zvariant_utils-2.1.0 \
+		zvariant_utils-3.0.2 \
 		font-kit@git+https://github.com/zed-industries/font-kit?rev=40391b7\#40391b7c0041d8a8572af2afa3de32ae088f0120 \
 		blade-graphics,blade-macros,blade-util@git+https://github.com/kvark/blade?rev=e142a3a5e678eb6a13e642ad8401b1f3aa38e969\#e142a3a5e678eb6a13e642ad8401b1f3aa38e969 \
 		tree-sitter-md@git+https://github.com/tree-sitter-grammars/tree-sitter-markdown?rev=9a23c1a96c0513d8fc6520972beedd419a973539\#9a23c1a96c0513d8fc6520972beedd419a973539 \
@@ -1134,6 +1149,8 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		cosmic-text@git+https://github.com/pop-os/cosmic-text?rev=542b20c\#542b20ca4376a3b5de5fa629db1a4ace44e18e0c \
 		tree-sitter-gowork@git+https://github.com/zed-industries/tree-sitter-go-work?rev=acb0617bf7f4fda02c6217676cc64acb89536dc7\#acb0617bf7f4fda02c6217676cc64acb89536dc7 \
 		tree-sitter-heex@git+https://github.com/zed-industries/tree-sitter-heex?rev=1dd45142fbb05562e35b2040c6129c9bca346592\#1dd45142fbb05562e35b2040c6129c9bca346592 \
+		libwebrtc,livekit,livekit-api,livekit-protocol,livekit-runtime,webrtc-sys,webrtc-sys-build@git+https://github.com/zed-industries/rust-sdks?rev=799f10133d93ba2a88642cd480d01ec4da53408c\#799f10133d93ba2a88642cd480d01ec4da53408c \
+		cpal@git+https://github.com/zed-industries/cpal?rev=fd8bc2fd39f1f5fdee5a0690656caff9a26d9d50\#fd8bc2fd39f1f5fdee5a0690656caff9a26d9d50 \
 		async-pipe@git+https://github.com/zed-industries/async-pipe-rs?rev=82d00a04211cf4e1236029aa03e6b6ce2a74c553\#82d00a04211cf4e1236029aa03e6b6ce2a74c553 \
 		nvim-rs@git+https://github.com/KillTheMule/nvim-rs?branch=master\#69500bae73b8b3f02a05b7bee621a0d0e633da6c \
 		tree-sitter-yaml@git+https://github.com/zed-industries/tree-sitter-yaml?rev=baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a\#baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a \
