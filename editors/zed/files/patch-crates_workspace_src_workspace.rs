@@ -1,6 +1,6 @@
---- crates/workspace/src/workspace.rs.orig	2024-12-28 12:39:35 UTC
+--- crates/workspace/src/workspace.rs.orig	2025-01-13 22:44:47 UTC
 +++ crates/workspace/src/workspace.rs
-@@ -3944,7 +3944,7 @@ impl Workspace {
+@@ -3994,7 +3994,7 @@ impl Workspace {
          None
      }
  
@@ -9,7 +9,7 @@
      fn shared_screen_for_peer(
          &self,
          _peer_id: PeerId,
-@@ -3954,7 +3954,7 @@ impl Workspace {
+@@ -4004,7 +4004,7 @@ impl Workspace {
          None
      }
  

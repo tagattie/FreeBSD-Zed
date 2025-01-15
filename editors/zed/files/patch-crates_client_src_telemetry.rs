@@ -1,6 +1,6 @@
---- crates/client/src/telemetry.rs.orig	2024-12-18 16:41:33 UTC
+--- crates/client/src/telemetry.rs.orig	2025-01-13 22:44:47 UTC
 +++ crates/client/src/telemetry.rs
-@@ -99,9 +99,13 @@ pub fn os_name() -> String {
+@@ -103,9 +103,13 @@ pub fn os_name() -> String {
      {
          "macOS".to_string()
      }

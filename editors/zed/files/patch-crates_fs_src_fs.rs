@@ -1,6 +1,6 @@
---- crates/fs/src/fs.rs.orig	2024-12-18 16:41:33 UTC
+--- crates/fs/src/fs.rs.orig	2025-01-13 22:44:47 UTC
 +++ crates/fs/src/fs.rs
-@@ -267,7 +267,7 @@ impl FileHandle for std::fs::File {
+@@ -269,7 +269,7 @@ impl FileHandle for std::fs::File {
          Ok(path)
      }
  
@@ -9,7 +9,7 @@
      fn current_path(&self, _: &Arc<dyn Fs>) -> Result<PathBuf> {
          let fd = self.as_fd();
          let fd_path = format!("/proc/self/fd/{}", fd.as_raw_fd());
-@@ -280,6 +280,27 @@ impl FileHandle for std::fs::File {
+@@ -282,6 +282,27 @@ impl FileHandle for std::fs::File {
          };
  
          Ok(new_path)

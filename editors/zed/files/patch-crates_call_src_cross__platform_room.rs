@@ -1,4 +1,4 @@
---- crates/call/src/cross_platform/room.rs.orig	2024-12-18 16:41:33 UTC
+--- crates/call/src/cross_platform/room.rs.orig	2025-01-13 22:44:47 UTC
 +++ crates/call/src/cross_platform/room.rs
 @@ -1,4 +1,4 @@
 -#![cfg_attr(target_os = "windows", allow(unused))]
@@ -120,7 +120,7 @@
              RoomEvent::Disconnected { reason } => {
                  log::info!("disconnected from room: {reason:?}");
                  self.leave(cx).detach_and_log_err(cx);
-@@ -1304,7 +1304,7 @@ impl Room {
+@@ -1310,7 +1310,7 @@ impl Room {
          #[cfg(not(any(test, feature = "test-support")))]
          {
              use feature_flags::FeatureFlagAppExt as _;
@@ -129,7 +129,7 @@
                  return false;
              }
          }
-@@ -1323,12 +1323,12 @@ impl Room {
+@@ -1329,12 +1329,12 @@ impl Room {
          }
      }
  
@@ -144,7 +144,7 @@
      #[track_caller]
      pub fn share_microphone(&mut self, cx: &mut ModelContext<Self>) -> Task<Result<()>> {
          if self.status.is_offline() {
-@@ -1406,12 +1406,12 @@ impl Room {
+@@ -1412,12 +1412,12 @@ impl Room {
          })
      }
  
@@ -159,7 +159,7 @@
      pub fn share_screen(&mut self, cx: &mut ModelContext<Self>) -> Task<Result<()>> {
          if self.status.is_offline() {
              return Task::ready(Err(anyhow!("room is offline")));
-@@ -1559,7 +1559,7 @@ impl Room {
+@@ -1565,7 +1565,7 @@ impl Room {
              LocalTrack::Published {
                  track_publication, ..
              } => {
@@ -168,7 +168,7 @@
                  {
                      let local_participant = live_kit.room.local_participant();
                      let sid = track_publication.sid();
-@@ -1575,7 +1575,7 @@ impl Room {
+@@ -1581,7 +1581,7 @@ impl Room {
      }
  
      fn set_deafened(&mut self, deafened: bool, cx: &mut ModelContext<Self>) -> Option<()> {
@@ -177,7 +177,7 @@
          {
              let live_kit = self.live_kit.as_mut()?;
              cx.notify();
-@@ -1617,7 +1617,7 @@ impl Room {
+@@ -1623,7 +1623,7 @@ impl Room {
              LocalTrack::Published {
                  track_publication, ..
              } => {
@@ -186,7 +186,7 @@
                  {
                      if should_mute {
                          track_publication.mute()
-@@ -1631,14 +1631,14 @@ impl Room {
+@@ -1637,14 +1637,14 @@ impl Room {
      }
  }
  
@@ -203,7 +203,7 @@
  fn spawn_room_connection(
      livekit_connection_info: Option<proto::LiveKitConnectionInfo>,
      cx: &mut ModelContext<'_, Room>,
-@@ -1703,10 +1703,10 @@ impl LiveKitRoom {
+@@ -1709,10 +1709,10 @@ impl LiveKitRoom {
  }
  
  impl LiveKitRoom {
