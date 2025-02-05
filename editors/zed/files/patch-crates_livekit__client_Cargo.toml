@@ -1,11 +1,20 @@
---- crates/livekit_client/Cargo.toml.orig	2024-12-28 09:16:57 UTC
+--- crates/livekit_client/Cargo.toml.orig	2025-02-05 09:28:58 UTC
 +++ crates/livekit_client/Cargo.toml
-@@ -43,7 +43,7 @@ image.workspace = true
+@@ -28,7 +28,6 @@ http_2 = { package = "http", version = "0.2.1" }
+ futures.workspace = true
+ gpui.workspace = true
+ http_2 = { package = "http", version = "0.2.1" }
+-livekit.workspace = true
+ livekit_server.workspace = true
+ log.workspace = true
+ media.workspace = true
+@@ -39,6 +38,9 @@ image.workspace = true
+ http_client.workspace = true
  smallvec.workspace = true
  image.workspace = true
- 
--[target.'cfg(not(target_os = "windows"))'.dependencies]
-+[target.'cfg(not(any(target_os = "windows", target_os = "freebsd")))'.dependencies]
- livekit.workspace = true
++
++[target.'cfg(not(target_os = "freebsd"))'.dependencies]
++livekit.workspace = true
  
  [target.'cfg(target_os = "macos")'.dependencies]
+ core-foundation.workspace = true

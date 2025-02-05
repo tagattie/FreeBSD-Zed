@@ -1,6 +1,6 @@
---- crates/cli/src/main.rs.orig	2025-01-13 22:44:47 UTC
+--- crates/cli/src/main.rs.orig	2025-02-01 17:50:38 UTC
 +++ crates/cli/src/main.rs
-@@ -104,7 +104,7 @@ fn main() -> Result<()> {
+@@ -101,7 +101,7 @@ fn main() -> Result<()> {
  
  fn main() -> Result<()> {
      // Exit flatpak sandbox if needed
@@ -9,7 +9,7 @@
      {
          flatpak::try_restart_to_host();
          flatpak::ld_extra_libs();
-@@ -122,7 +122,7 @@ fn main() -> Result<()> {
+@@ -119,7 +119,7 @@ fn main() -> Result<()> {
      }
      let args = Args::parse();
  
@@ -18,7 +18,7 @@
      let args = flatpak::set_bin_if_no_escape(args);
  
      let app = Detect::detect(args.zed.as_deref()).context("Bundle detection")?;
-@@ -392,7 +392,7 @@ mod linux {
+@@ -398,7 +398,7 @@ mod linux {
      }
  }
  
