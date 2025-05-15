@@ -28,7 +28,7 @@ RUN_DEPENDS=	vulkaninfo:graphics/vulkan-tools \
 		xdg-desktop-portal-gtk>0:x11/xdg-desktop-portal-gtk
 
 USES=		cargo cmake:indirect desktop-file-utils gettext-runtime:build \
-		nodejs:lts,run ssl xorg
+		llvm nodejs:lts,run ssl xorg
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	zed-industries
