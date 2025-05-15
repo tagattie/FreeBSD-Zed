@@ -1,6 +1,6 @@
 PORTNAME=	zed
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.171.6
+DISTVERSION=	0.186.8
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-editor
 
@@ -23,7 +23,8 @@ LIB_DEPENDS=	libzstd.so:archivers/zstd \
 		libwayland-client.so:graphics/wayland \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libxkbcommon.so:x11/libxkbcommon
-RUN_DEPENDS=	npm${NODEJS_SUFFIX}>0:www/npm${NODEJS_SUFFIX} \
+RUN_DEPENDS=	vulkaninfo:graphics/vulkan-tools \
+		npm${NODEJS_SUFFIX}>0:www/npm${NODEJS_SUFFIX} \
 		xdg-desktop-portal-gtk>0:x11/xdg-desktop-portal-gtk
 
 USES=		cargo cmake:indirect desktop-file-utils gettext-runtime:build \
@@ -61,6 +62,7 @@ OPTIONS_DEFINE=	DOCS
 post-patch:
 # https://github.com/RazrFalcon/fontdb/issues/61
 	@${REINPLACE_CMD} -e 's|/etc|${LOCALBASE}&|g' \
+		${WRKSRC_crate_fontdb-0.16.2}/src/lib.rs \
 		${WRKSRC_crate_fontdb}/src/lib.rs
 
 post-build:

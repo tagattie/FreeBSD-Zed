@@ -1,6 +1,6 @@
---- crates/cli/src/main.rs.orig	2025-02-01 17:50:38 UTC
+--- crates/cli/src/main.rs.orig	2025-05-14 14:15:56 UTC
 +++ crates/cli/src/main.rs
-@@ -101,7 +101,7 @@ fn main() -> Result<()> {
+@@ -128,7 +128,7 @@ fn main() -> Result<()> {
  
  fn main() -> Result<()> {
      // Exit flatpak sandbox if needed
@@ -9,16 +9,16 @@
      {
          flatpak::try_restart_to_host();
          flatpak::ld_extra_libs();
-@@ -119,7 +119,7 @@ fn main() -> Result<()> {
+@@ -152,7 +152,7 @@ fn main() -> Result<()> {
+         paths::set_custom_data_dir(dir);
      }
-     let args = Args::parse();
  
 -    #[cfg(any(target_os = "linux", target_os = "freebsd"))]
 +    #[cfg(target_os = "linux")]
      let args = flatpak::set_bin_if_no_escape(args);
  
      let app = Detect::detect(args.zed.as_deref()).context("Bundle detection")?;
-@@ -398,7 +398,7 @@ mod linux {
+@@ -525,7 +525,7 @@ mod linux {
      }
  }
  
