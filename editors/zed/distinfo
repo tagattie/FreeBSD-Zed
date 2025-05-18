@@ -1,4 +1,4 @@
-TIMESTAMP = 1747290461
+TIMESTAMP = 1747540420
 SHA256 (rust/crates/addr2line-0.24.2.crate) = dfbe277e56a376000877090da837660b4427aad530e3028d44e0bffe4f89a1c1
 SIZE (rust/crates/addr2line-0.24.2.crate) = 39015
 SHA256 (rust/crates/adler2-2.0.0.crate) = 512761e0bb2578dd7380c6baaa0f4ce03e84f95e960231d1dec8bf4d7d6e2627
@@ -2591,5 +2591,5 @@ SHA256 (zed-industries-tree-sitter-yaml-baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a
 SIZE (zed-industries-tree-sitter-yaml-baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a_GH0.tar.gz) = 145319
 SHA256 (zed-industries-async-stripe-3672dd4efb7181aa597bf580bf5a2f5d23db6735_GH0.tar.gz) = feec619f666fe210c118d5ff51ada8c1d2115b0ae7a0defd05cea7ccea8c6198
 SIZE (zed-industries-async-stripe-3672dd4efb7181aa597bf580bf5a2f5d23db6735_GH0.tar.gz) = 1057821
-SHA256 (zed-industries-zed-v0.186.8_GH0.tar.gz) = 34166012a7218e604a030576de32d12a79381dbbd741485e2898ecfe8a4d5b6b
-SIZE (zed-industries-zed-v0.186.8_GH0.tar.gz) = 14733132
+SHA256 (zed-industries-zed-v0.186.9_GH0.tar.gz) = a766e0a463aebc6f54c063803901f9260507ad1f94570cbf5e1926fac99b0399
+SIZE (zed-industries-zed-v0.186.9_GH0.tar.gz) = 14733751
