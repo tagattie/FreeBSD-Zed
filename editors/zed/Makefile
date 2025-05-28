@@ -1,6 +1,6 @@
 PORTNAME=	zed
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.187.8
+DISTVERSION=	0.187.9
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-editor
 
@@ -33,7 +33,7 @@ USES=		cargo cmake:indirect desktop-file-utils gettext-runtime:build \
 USE_GITHUB=	yes
 GH_ACCOUNT=	zed-industries
 
-USE_XORG=	xcb
+USE_XORG=	x11 xcb
 
 CARGO_BUILD_ARGS=	--package zed --package cli --package remote_server
 CARGO_TEST_ARGS=	--workspace
