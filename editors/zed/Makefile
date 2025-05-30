@@ -1,6 +1,6 @@
 PORTNAME=	zed
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.187.9
+DISTVERSION=	0.188.5
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-editor
 
@@ -50,7 +50,7 @@ MAKE_ENV=	APP_CLI="zedit" \
 RUSTFLAGS=	--cfg vulkan -C link-args=-Wl,-z,nostart-stop-gc
 
 PLIST_FILES=	bin/zedit \
-		bin/zed-remote-server \
+		bin/zed-remote-server-stable-${DISTVERSION} \
 		libexec/zed-editor \
 		share/applications/dev.zed.Zed.desktop \
 		share/icons/hicolor/1024x1024/apps/zed-editor.png \
@@ -74,7 +74,7 @@ do-install:
 	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/release/cli \
 		${STAGEDIR}${PREFIX}/bin/zedit
 	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/release/remote_server \
-		${STAGEDIR}${PREFIX}/bin/zed-remote-server
+		${STAGEDIR}${PREFIX}/bin/zed-remote-server-stable-${DISTVERSION}
 	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/release/zed \
 		${STAGEDIR}${PREFIX}/libexec/zed-editor
 	${INSTALL_DATA} ${WRKSRC}/crates/zed/resources/${PORTNAME}.desktop \
