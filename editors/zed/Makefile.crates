@@ -1143,7 +1143,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		wasi-0.9.0+wasi-snapshot-preview1 \
 		wasi-0.11.0+wasi-snapshot-preview1 \
 		wasi-0.14.2+wasi-0.2.4 \
-		wasi-preview1-component-adapter-provider-29.0.1 \
 		wasite-0.1.0 \
 		wasm-bindgen-0.2.100 \
 		wasm-bindgen-backend-0.2.100 \
@@ -1155,7 +1154,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		wasm-encoder-0.221.3 \
 		wasm-encoder-0.227.1 \
 		wasm-metadata-0.201.0 \
-		wasm-metadata-0.221.3 \
 		wasm-metadata-0.227.1 \
 		wasm-streams-0.4.2 \
 		wasmparser-0.201.0 \
@@ -1289,7 +1287,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		wit-bindgen-rust-macro-0.22.0 \
 		wit-bindgen-rust-macro-0.41.0 \
 		wit-component-0.201.0 \
-		wit-component-0.221.3 \
 		wit-component-0.227.1 \
 		wit-parser-0.201.0 \
 		wit-parser-0.221.3 \
