@@ -1,6 +1,6 @@
 PORTNAME=	zed
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.190.4
+DISTVERSION=	0.190.6
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-editor
 
@@ -46,8 +46,6 @@ MAKE_ENV=	APP_CLI="zedit" \
 		DO_STARTUP_NOTIFY="true" \
 		ZED_UPDATE_EXPLANATION="Please use packages/ports to update zed." \
 		RELEASE_VERSION="${DISTVERSION}"
-
-RUSTFLAGS=	--cfg vulkan -C link-args=-Wl,-z,nostart-stop-gc
 
 PLIST_FILES=	bin/zedit \
 		bin/zed-remote-server-stable-${DISTVERSION} \
