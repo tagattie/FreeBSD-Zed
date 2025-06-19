@@ -1,6 +1,6 @@
---- crates/cli/src/main.rs.orig	2025-05-30 15:44:16 UTC
+--- crates/cli/src/main.rs.orig	2025-06-18 19:13:38 UTC
 +++ crates/cli/src/main.rs
-@@ -128,7 +128,7 @@ fn main() -> Result<()> {
+@@ -131,7 +131,7 @@ fn main() -> Result<()> {
  
  fn main() -> Result<()> {
      // Exit flatpak sandbox if needed
@@ -9,7 +9,7 @@
      {
          flatpak::try_restart_to_host();
          flatpak::ld_extra_libs();
-@@ -152,7 +152,7 @@ fn main() -> Result<()> {
+@@ -155,7 +155,7 @@ fn main() -> Result<()> {
          paths::set_custom_data_dir(dir);
      }
  
@@ -18,7 +18,7 @@
      let args = flatpak::set_bin_if_no_escape(args);
  
      let app = Detect::detect(args.zed.as_deref()).context("Bundle detection")?;
-@@ -359,7 +359,7 @@ fn anonymous_fd(path: &str) -> Option<fs::File> {
+@@ -371,7 +371,7 @@ fn anonymous_fd(path: &str) -> Option<fs::File> {
          let file = unsafe { fs::File::from_raw_fd(fd) };
          return Some(file);
      }
@@ -27,7 +27,7 @@
      {
          use std::os::{
              fd::{self, FromRawFd},
-@@ -377,7 +377,7 @@ fn anonymous_fd(path: &str) -> Option<fs::File> {
+@@ -389,7 +389,7 @@ fn anonymous_fd(path: &str) -> Option<fs::File> {
          let file = unsafe { fs::File::from_raw_fd(fd) };
          return Some(file);
      }
@@ -36,7 +36,7 @@
      {
          _ = path;
          // not implemented for bsd, windows. Could be, but isn't yet
-@@ -522,7 +522,7 @@ mod linux {
+@@ -534,7 +534,7 @@ mod linux {
      }
  }
  
