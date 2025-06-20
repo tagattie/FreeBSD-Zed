@@ -1,6 +1,6 @@
---- Cargo.lock.orig	2025-06-18 19:13:38 UTC
+--- Cargo.lock.orig	2025-06-20 14:58:27 UTC
 +++ Cargo.lock
-@@ -8358,16 +8358,14 @@ version = "0.19.0"
+@@ -8300,16 +8300,14 @@ version = "0.19.0"
  [[package]]
  name = "ipc-channel"
  version = "0.19.0"
