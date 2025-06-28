@@ -216,8 +216,11 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		core_maths-0.1.1 \
 		coreaudio-rs-0.11.3 \
 		coreaudio-rs-0.12.1 \
+		coreaudio-rs-0.13.0 \
 		coreaudio-sys-0.2.16 \
 		cosmic-text-0.14.0 \
+		cpal-0.15.3 \
+		cpal-0.16.0 \
 		cpp_demangle-0.4.4 \
 		cpufeatures-0.2.17 \
 		cranelift-bforest-0.116.1 \
@@ -649,8 +652,10 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		nanorand-0.7.0 \
 		native-tls-0.2.14 \
 		ndk-0.8.0 \
+		ndk-0.9.0 \
 		ndk-context-0.1.1 \
 		ndk-sys-0.5.0+25.2.9519653 \
+		ndk-sys-0.6.0+11769913 \
 		new_debug_unreachable-1.0.6 \
 		nix-0.28.0 \
 		nix-0.29.0 \
@@ -684,6 +689,9 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		objc-foundation-0.1.1 \
 		objc2-0.6.1 \
 		objc2-app-kit-0.3.1 \
+		objc2-audio-toolbox-0.3.1 \
+		objc2-core-audio-0.3.1 \
+		objc2-core-audio-types-0.3.1 \
 		objc2-core-foundation-0.3.1 \
 		objc2-encode-4.1.0 \
 		objc2-foundation-0.3.1 \
@@ -1357,9 +1365,8 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		tree-sitter-gitcommit@git+https://github.com/zed-industries/tree-sitter-git-commit?rev=88309716a69dd13ab83443721ba6e0b491d37ee9\#88309716a69dd13ab83443721ba6e0b491d37ee9 \
 		libwebrtc,livekit,livekit-api,livekit-protocol,livekit-runtime,webrtc-sys,webrtc-sys-build@git+https://github.com/zed-industries/livekit-rust-sdks?rev=80bb8f4c9112789f7c24cc98d8423010977806a6\#80bb8f4c9112789f7c24cc98d8423010977806a6 \
 		tree-sitter-gowork@git+https://github.com/zed-industries/tree-sitter-go-work?rev=acb0617bf7f4fda02c6217676cc64acb89536dc7\#acb0617bf7f4fda02c6217676cc64acb89536dc7 \
+		blade-graphics,blade-macros,blade-util@git+https://github.com/kvark/blade?rev=e0ec4e720957edd51b945b64dd85605ea54bcfe5\#e0ec4e720957edd51b945b64dd85605ea54bcfe5 \
 		tree-sitter-heex@git+https://github.com/zed-industries/tree-sitter-heex?rev=1dd45142fbb05562e35b2040c6129c9bca346592\#1dd45142fbb05562e35b2040c6129c9bca346592 \
-		blade-graphics,blade-macros,blade-util@git+https://github.com/kvark/blade?rev=416375211bb0b5826b3584dccdb6a43369e499ad\#416375211bb0b5826b3584dccdb6a43369e499ad \
-		cpal@git+https://github.com/zed-industries/cpal?rev=fd8bc2fd39f1f5fdee5a0690656caff9a26d9d50\#fd8bc2fd39f1f5fdee5a0690656caff9a26d9d50 \
 		async-pipe@git+https://github.com/zed-industries/async-pipe-rs?rev=82d00a04211cf4e1236029aa03e6b6ce2a74c553\#82d00a04211cf4e1236029aa03e6b6ce2a74c553 \
 		nvim-rs@git+https://github.com/KillTheMule/nvim-rs?rev=764dd270c642f77f10f3e19d05cc178a6cbe69f3\#764dd270c642f77f10f3e19d05cc178a6cbe69f3 \
 		notify,notify-types@git+https://github.com/zed-industries/notify.git?rev=bbb9ea5ae52b253e095737847e367c30653a2e96\#bbb9ea5ae52b253e095737847e367c30653a2e96 \

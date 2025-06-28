@@ -1,6 +1,6 @@
---- crates/feedback/src/system_specs.rs.orig	2025-06-04 14:12:33 UTC
+--- crates/feedback/src/system_specs.rs.orig	2025-06-27 16:44:45 UTC
 +++ crates/feedback/src/system_specs.rs
-@@ -123,7 +123,7 @@ fn try_determine_available_gpus() -> Option<String> {
+@@ -133,7 +133,7 @@ fn try_determine_available_gpus() -> Option<String> {
  }
  
  fn try_determine_available_gpus() -> Option<String> {
@@ -9,7 +9,7 @@
      {
          return std::process::Command::new("vulkaninfo")
              .args(&["--summary"])
-@@ -142,7 +142,7 @@ fn try_determine_available_gpus() -> Option<String> {
+@@ -152,7 +152,7 @@ fn try_determine_available_gpus() -> Option<String> {
              })
              .or(Some("Failed to run `vulkaninfo --summary`".to_string()));
      }
