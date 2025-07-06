@@ -734,7 +734,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		paste-1.0.15 \
 		pathdiff-0.2.3 \
 		pathfinder_geometry-0.5.1 \
-		pathfinder_simd-0.5.4 \
+		pathfinder_simd-0.5.5 \
 		pbjson-0.6.0 \
 		pbjson-build-0.6.2 \
 		pbjson-types-0.6.0 \

@@ -1,4 +1,4 @@
-TIMESTAMP = 1751113010
+TIMESTAMP = 1751789558
 SHA256 (rust/crates/addr2line-0.24.2.crate) = dfbe277e56a376000877090da837660b4427aad530e3028d44e0bffe4f89a1c1
 SIZE (rust/crates/addr2line-0.24.2.crate) = 39015
 SHA256 (rust/crates/adler2-2.0.0.crate) = 512761e0bb2578dd7380c6baaa0f4ce03e84f95e960231d1dec8bf4d7d6e2627
@@ -1471,8 +1471,8 @@ SHA256 (rust/crates/pathdiff-0.2.3.crate) = df94ce210e5bc13cb6651479fa48d14f601d
 SIZE (rust/crates/pathdiff-0.2.3.crate) = 7495
 SHA256 (rust/crates/pathfinder_geometry-0.5.1.crate) = 0b7b7e7b4ea703700ce73ebf128e1450eb69c3a8329199ffbfb9b2a0418e5ad3
 SIZE (rust/crates/pathfinder_geometry-0.5.1.crate) = 11583
-SHA256 (rust/crates/pathfinder_simd-0.5.4.crate) = 5cf07ef4804cfa9aea3b04a7bbdd5a40031dbb6b4f2cbaf2b011666c80c5b4f2
-SIZE (rust/crates/pathfinder_simd-0.5.4.crate) = 29951
+SHA256 (rust/crates/pathfinder_simd-0.5.5.crate) = bf9027960355bf3afff9841918474a81a5f972ac6d226d518060bba758b5ad57
+SIZE (rust/crates/pathfinder_simd-0.5.5.crate) = 30388
 SHA256 (rust/crates/pbjson-0.6.0.crate) = 1030c719b0ec2a2d25a5df729d6cff1acf3cc230bf766f4f97833591f7577b90
 SIZE (rust/crates/pbjson-0.6.0.crate) = 2621
 SHA256 (rust/crates/pbjson-build-0.6.2.crate) = 2580e33f2292d34be285c5bc3dba5259542b083cfad6037b6d70345f24dcb735
@@ -2751,5 +2751,5 @@ SHA256 (zed-industries-tree-sitter-yaml-baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a
 SIZE (zed-industries-tree-sitter-yaml-baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a_GH0.tar.gz) = 145319
 SHA256 (zed-industries-async-stripe-3672dd4efb7181aa597bf580bf5a2f5d23db6735_GH0.tar.gz) = feec619f666fe210c118d5ff51ada8c1d2115b0ae7a0defd05cea7ccea8c6198
 SIZE (zed-industries-async-stripe-3672dd4efb7181aa597bf580bf5a2f5d23db6735_GH0.tar.gz) = 1057821
-SHA256 (zed-industries-zed-v0.192.7_GH0.tar.gz) = edeae3abdb40f7ad849cc05806c2befb31e193f150a8b831c1013fdb4807e6fd
-SIZE (zed-industries-zed-v0.192.7_GH0.tar.gz) = 15482864
+SHA256 (zed-industries-zed-v0.193.3_GH0.tar.gz) = a702ad7c3c1231b1fa256b46412e8438b79c1aa74376ea60b147e812ab064317
+SIZE (zed-industries-zed-v0.193.3_GH0.tar.gz) = 15515949
