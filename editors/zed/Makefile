@@ -1,8 +1,11 @@
 PORTNAME=	zed
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.196.7
+DISTVERSION=	0.197.5
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-editor
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	3ad0546b0d4fb12334eac49631f682caf85ff83a.patch:-p1	# see #35189 and #35191
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Code at the speed of thought
