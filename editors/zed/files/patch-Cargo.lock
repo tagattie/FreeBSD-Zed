@@ -1,6 +1,6 @@
---- Cargo.lock.orig	2025-08-03 07:09:09 UTC
+--- Cargo.lock.orig	2025-08-08 18:43:10 UTC
 +++ Cargo.lock
-@@ -8471,17 +8471,16 @@ name = "ipc-channel"
+@@ -8554,17 +8554,16 @@ name = "ipc-channel"
  
  [[package]]
  name = "ipc-channel"
@@ -15,7 +15,7 @@
   "fnv",
 - "lazy_static",
   "libc",
-  "mio 1.0.3",
+  "mio",
 - "rand 0.8.5",
 + "rand 0.9.1",
   "serde",
