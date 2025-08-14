@@ -1,4 +1,4 @@
-TIMESTAMP = 1754809079
+TIMESTAMP = 1755180259
 SHA256 (rust/crates/addr2line-0.24.2.crate) = dfbe277e56a376000877090da837660b4427aad530e3028d44e0bffe4f89a1c1
 SIZE (rust/crates/addr2line-0.24.2.crate) = 39015
 SHA256 (rust/crates/adler2-2.0.0.crate) = 512761e0bb2578dd7380c6baaa0f4ce03e84f95e960231d1dec8bf4d7d6e2627
@@ -2073,8 +2073,6 @@ SHA256 (rust/crates/thread_local-1.1.8.crate) = 8b9ef9bad013ada3808854ceac7b4681
 SIZE (rust/crates/thread_local-1.1.8.crate) = 13962
 SHA256 (rust/crates/tiff-0.9.1.crate) = ba1310fcea54c6a9a4fd1aad794ecc02c31682f6bfbecdf460bf19533eed1e3e
 SIZE (rust/crates/tiff-0.9.1.crate) = 1423953
-SHA256 (rust/crates/tiktoken-rs-0.7.0.crate) = 25563eeba904d770acf527e8b370fe9a5547bacd20ff84a0b6c3bc41288e5625
-SIZE (rust/crates/tiktoken-rs-0.7.0.crate) = 3792064
 SHA256 (rust/crates/time-0.3.41.crate) = 8a7619e19bc266e0f9c5e6686659d394bc57973859340060a69221e57dbc0c40
 SIZE (rust/crates/time-0.3.41.crate) = 138369
 SHA256 (rust/crates/time-core-0.1.4.crate) = c9e9a38711f559d9e3ce1cdb06dd7c5b8ea546bc90052da6d06bb76da74bb07c
@@ -2719,6 +2717,8 @@ SHA256 (zed-industries-alacritty-828457c9ff1f7ea0a0469337cc8a37ee3a1b0590_GH0.ta
 SIZE (zed-industries-alacritty-828457c9ff1f7ea0a0469337cc8a37ee3a1b0590_GH0.tar.gz) = 1648143
 SHA256 (tree-sitter-grammars-tree-sitter-markdown-9a23c1a96c0513d8fc6520972beedd419a973539_GH0.tar.gz) = 429dc5952b47034346eed7689f677b014e99502c9f478a3987c5d683ef3e6475
 SIZE (tree-sitter-grammars-tree-sitter-markdown-9a23c1a96c0513d8fc6520972beedd419a973539_GH0.tar.gz) = 418620
+SHA256 (zed-industries-tiktoken-rs-30c32a4522751699adeda0d5840c71c3b75ae73d_GH0.tar.gz) = 0eb2013d1c10abcd46be7e61fda58aa893fe02b8dac04c864f0a3e57d279ca46
+SIZE (zed-industries-tiktoken-rs-30c32a4522751699adeda0d5840c71c3b75ae73d_GH0.tar.gz) = 3815470
 SHA256 (zed-industries-windows-capture-f0d6c1b6691db75461b732f6d5ff56eed002eeb9_GH0.tar.gz) = 3667ab763b7d3040216f77abc7dedb7994f4624a5a06bca4a36f7df416fba2c8
 SIZE (zed-industries-windows-capture-f0d6c1b6691db75461b732f6d5ff56eed002eeb9_GH0.tar.gz) = 40237
 SHA256 (microsoft-python-environment-tools-845945b830297a50de0e24020b980a65e4820559_GH0.tar.gz) = 8a1bd2fc1b620f4eebc9b5d396bc682dfe8b9f5cd266790e5ce77dacb339687e
@@ -2761,5 +2761,5 @@ SHA256 (zed-industries-tree-sitter-yaml-baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a
 SIZE (zed-industries-tree-sitter-yaml-baff0b51c64ef6a1fb1f8390f3ad6015b83ec13a_GH0.tar.gz) = 145319
 SHA256 (zed-industries-async-stripe-3672dd4efb7181aa597bf580bf5a2f5d23db6735_GH0.tar.gz) = feec619f666fe210c118d5ff51ada8c1d2115b0ae7a0defd05cea7ccea8c6198
 SIZE (zed-industries-async-stripe-3672dd4efb7181aa597bf580bf5a2f5d23db6735_GH0.tar.gz) = 1057821
-SHA256 (zed-industries-zed-v0.198.5_GH0.tar.gz) = 056b0c31d8d7756e47b3a2f90bf3fafa471524a0532ebebc73cd896ba0e9a1eb
-SIZE (zed-industries-zed-v0.198.5_GH0.tar.gz) = 16571307
+SHA256 (zed-industries-zed-v0.198.6_GH0.tar.gz) = bfb79ca712d4a16c6693f0cbb6cb3988c83a880c8fa068c5d04c8b2af07fc402
+SIZE (zed-industries-zed-v0.198.6_GH0.tar.gz) = 16571649

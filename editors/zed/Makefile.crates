@@ -1035,7 +1035,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		thiserror-impl-2.0.12 \
 		thread_local-1.1.8 \
 		tiff-0.9.1 \
-		tiktoken-rs-0.7.0 \
 		time-0.3.41 \
 		time-core-0.1.4 \
 		time-macros-0.2.22 \
@@ -1358,6 +1357,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		reqwest@git+https://github.com/zed-industries/reqwest.git?rev=951c770a32f1998d6e999cef3e59e0013e6c4415\#951c770a32f1998d6e999cef3e59e0013e6c4415 \
 		alacritty_terminal@git+https://github.com/zed-industries/alacritty.git?branch=add-hush-login-flag\#828457c9ff1f7ea0a0469337cc8a37ee3a1b0590 \
 		tree-sitter-md@git+https://github.com/tree-sitter-grammars/tree-sitter-markdown?rev=9a23c1a96c0513d8fc6520972beedd419a973539\#9a23c1a96c0513d8fc6520972beedd419a973539 \
+		tiktoken-rs@git+https://github.com/zed-industries/tiktoken-rs?rev=30c32a4522751699adeda0d5840c71c3b75ae73d\#30c32a4522751699adeda0d5840c71c3b75ae73d \
 		windows-capture@git+https://github.com/zed-industries/windows-capture.git?rev=f0d6c1b6691db75461b732f6d5ff56eed002eeb9\#f0d6c1b6691db75461b732f6d5ff56eed002eeb9 \
 		pet,pet-conda,pet-core,pet-env-var-path,pet-fs,pet-global-virtualenvs,pet-homebrew,pet-jsonrpc,pet-linux-global-python,pet-mac-commandlinetools,pet-mac-python-org,pet-mac-xcode,pet-pipenv,pet-pixi,pet-poetry,pet-pyenv,pet-python-utils,pet-reporter,pet-telemetry,pet-venv,pet-virtualenv,pet-virtualenvwrapper,pet-windows-registry,pet-windows-store@git+https://github.com/microsoft/python-environment-tools.git?rev=845945b830297a50de0e24020b980a65e4820559\#845945b830297a50de0e24020b980a65e4820559 \
 		jupyter-protocol,jupyter-websocket-client,nbformat,runtimelib@git+https://github.com/ConradIrwin/runtimed?rev=7130c804216b6914355d15d0b91ea91f6babd734\#7130c804216b6914355d15d0b91ea91f6babd734 \
