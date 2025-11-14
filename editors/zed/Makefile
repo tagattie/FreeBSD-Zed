@@ -14,6 +14,9 @@ LICENSE_FILE_AGPLv3=	${WRKSRC}/LICENSE-AGPL
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_GPLv3=	${WRKSRC}/LICENSE-GPL
 
+ONLY_FOR_ARCHS=	aarch64 amd64
+ONLY_FOR_ARCHS_REASON=	Some of dependent crates only support these architectures
+
 BUILD_DEPENDS=	protoc:devel/protobuf
 LIB_DEPENDS=	libzstd.so:archivers/zstd \
 		libasound.so:audio/alsa-lib \
