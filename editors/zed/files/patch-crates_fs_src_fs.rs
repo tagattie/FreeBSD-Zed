@@ -1,6 +1,6 @@
---- crates/fs/src/fs.rs.orig	2025-11-15 04:52:04 UTC
+--- crates/fs/src/fs.rs.orig	2025-11-19 15:41:44 UTC
 +++ crates/fs/src/fs.rs
-@@ -309,7 +309,10 @@ impl FileHandle for std::fs::File {
+@@ -365,7 +365,10 @@ impl FileHandle for std::fs::File {
  
          let fd = self.as_fd();
          let mut kif = MaybeUninit::<libc::kinfo_file>::uninit();
