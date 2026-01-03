@@ -76,7 +76,7 @@ do-install:
 	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/release/cli \
 		${STAGEDIR}${PREFIX}/bin/zedit
 	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/release/remote_server \
-		${STAGEDIR}${PREFIX}/bin/zed-remote-server-stable-${DISTVERSION}
+		${STAGEDIR}${PREFIX}/bin/zed-remote-server-stable-${DISTVERSION}+stable
 	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/release/zed \
 		${STAGEDIR}${PREFIX}/libexec/zed-editor
 	${INSTALL_DATA} ${WRKSRC}/crates/zed/resources/${PORTNAME}.desktop \
