@@ -1,7 +1,7 @@
 PORTNAME=	zed
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.217.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-editor
 
@@ -50,6 +50,9 @@ MAKE_ENV=	APP_CLI="zedit" \
 		DO_STARTUP_NOTIFY="true" \
 		ZED_UPDATE_EXPLANATION="Please use packages/ports to update zed." \
 		RELEASE_VERSION="${DISTVERSION}"
+
+SUB_FILES=	pkg-message
+SUB_LIST=	DISTVERSION=${DISTVERSION}
 
 PLIST_FILES=	bin/zedit \
 		bin/zed-remote-server-stable-${DISTVERSION}+stable \
