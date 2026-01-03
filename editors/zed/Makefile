@@ -52,7 +52,7 @@ MAKE_ENV=	APP_CLI="zedit" \
 		RELEASE_VERSION="${DISTVERSION}"
 
 PLIST_FILES=	bin/zedit \
-		bin/zed-remote-server-stable-${DISTVERSION} \
+		bin/zed-remote-server-stable-${DISTVERSION}+stable \
 		libexec/zed-editor \
 		share/applications/dev.zed.Zed.desktop \
 		share/icons/hicolor/1024x1024/apps/zed-editor.png \
