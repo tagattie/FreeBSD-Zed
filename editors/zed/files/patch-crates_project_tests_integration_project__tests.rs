@@ -1,6 +1,6 @@
---- crates/project/tests/integration/project_tests.rs.orig	2026-04-10 01:17:11 UTC
+--- crates/project/tests/integration/project_tests.rs.orig	2026-04-15 21:06:43 UTC
 +++ crates/project/tests/integration/project_tests.rs
-@@ -5697,7 +5697,7 @@ async fn test_rescan_and_remote_updates(cx: &mut gpui:
+@@ -5704,7 +5704,7 @@ async fn test_rescan_and_remote_updates(cx: &mut gpui:
      });
  }
  
